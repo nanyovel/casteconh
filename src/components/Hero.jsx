@@ -100,6 +100,7 @@ const ContainerPadre = styled.div`
   /* background-color: black; */
   background-color: ${Theme.primary.azulSuave};
   width: 100vw;
+  margin-bottom: 150px;
 `;
 
 const Container = styled.div`
