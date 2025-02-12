@@ -6,8 +6,11 @@ const Theme = {
   secondary: {
     mostazaClaro: "#F2C66D ",
     mostazaOscuro: "#A3771E",
+    mostazaTenue: "#c28d29",
     azulIntermedio: "#22427A",
     azulOscuro: "#000E30",
+    azulBrillante: "#00b9ff",
+    mostazaShadow: "#e7a61a",
   },
   complementarios: {
     terracotaSuave: "#C56E33",

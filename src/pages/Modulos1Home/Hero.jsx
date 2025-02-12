@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Theme from "../config/Theme";
-import ImgQuirofano1 from "./../../public/img/sliderHome/quirofano1.jpg";
-import ImgQuirofano2 from "./../../public/img/sliderHome/quirofano.webp";
-import ImgQuirofano3 from "./../../public/img/sliderHome/quirofano2.jpg";
-import ImgQuirofano4 from "./../../public/img/sliderHome/quirofano3.webp";
-import ImgQuirofano5 from "./../../public/img/sliderHome/quirofano4.jpg";
-import { BotonGeneral } from "./ElementosGenerales";
+import Theme from "../../config/Theme";
+import ImgQuirofano1 from "./../../../public/img/sliderHome/quirofano1.jpg";
+import ImgQuirofano2 from "./../../../public/img/sliderHome/quirofano.webp";
+import ImgQuirofano3 from "./../../../public/img/sliderHome/quirofano2.jpg";
+import ImgQuirofano4 from "./../../../public/img/sliderHome/quirofano3.webp";
+import ImgQuirofano5 from "./../../../public/img/sliderHome/quirofano4.jpg";
+import { BotonGeneral } from "../../components/ElementosGenerales";
 
 export default function Hero() {
   const items = [
