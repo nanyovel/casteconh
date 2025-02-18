@@ -5,6 +5,7 @@ import React from "react";
 import Header from "../components/Header";
 import Hero from "./Modulos1Home/Hero";
 import Marcas from "./Modulos1Home/Marcas";
+import CarrucelMarcas from "./Modulos1Home/CarrucerMarcas";
 
 export default function Home() {
   return (
@@ -36,16 +37,21 @@ export default function Home() {
             en el mercado de Republica Dominicana.
           </Sub_Parrafo>
         </WrapTitulo>
-        <Marcas />
+        <WrapModulo>
+          <Marcas />
+        </WrapModulo>
       </Seccion>
-      <Seccion>
-        <CajaTitulo>
+      <Seccion className="noPadding">
+        <CajaTitulo className="padding">
           <WrapCuadro>
             <CuadroAzul />
           </WrapCuadro>
-          <TituloSeccion>Productos y servicios:</TituloSeccion>
+          <TituloSeccion>Nuestros servicios:</TituloSeccion>
         </CajaTitulo>
-        {/* <Marcas /> */}
+        <WrapModulo className="bgDorado">
+          <CarrucelMarcas />
+          <CarrucelMarcas invertido={true} />
+        </WrapModulo>
       </Seccion>
 
       {/* <Seccion></Seccion> */}
@@ -75,12 +81,18 @@ const Seccion = styled.div`
   &.bgBlue {
     background-color: ${Theme.primary.azulProfundo};
   }
+  &.noPadding {
+    padding: 0;
+  }
 `;
 const CajaTitulo = styled.div`
   width: 100%;
   height: 80px;
   display: flex;
   /* background-color: blue; */
+  &.padding {
+    padding: 0 100px;
+  }
 `;
 const WrapCuadro = styled.div`
   position: relative;
@@ -131,4 +143,12 @@ const Punto = styled.div`
   border-radius: 50%;
   display: inline-block;
   margin-left: 5px;
+`;
+const WrapModulo = styled.div`
+  padding: 70px 0;
+  &.bgDorado {
+    height: 450px;
+    width: 100%;
+    background-color: ${Theme.primary.azulProfundo};
+  }
 `;

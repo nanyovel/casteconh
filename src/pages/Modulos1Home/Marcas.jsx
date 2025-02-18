@@ -160,7 +160,7 @@ const CajaGlasliner = styled(CajaSlider)`
   &.mostrar {
     opacity: 1;
     transform: translate(0%);
-    right: 20px;
+    right: 100px;
   }
 `;
 const CajaPolysto = styled(CajaSlider)`
@@ -172,7 +172,7 @@ const CajaPolysto = styled(CajaSlider)`
   &.mostrar {
     opacity: 1;
     transform: translate(0%);
-    left: 20px;
+    left: 100px;
   }
 `;
 const CajaTitulo = styled.div`
