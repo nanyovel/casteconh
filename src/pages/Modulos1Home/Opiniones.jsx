@@ -26,12 +26,10 @@ export default function Opiniones() {
           <Nombre>Jose Perez</Nombre>
           <Cargo>Director Grl. Supermercados Bravo</Cargo>
           <Review>
-            Quedamos completamente satisfechos con el servicio. El equipo
-            demostró profesionalismo y conocimiento en materiales asépticos. Nos
-            asesoraron en la mejor solución para nuestro espacio y la
-            instalación fue impecable. La calidad de los materiales es excelente
-            y realmente garantizan un ambiente higiénico y seguro. Sin duda, los
-            recomendaremos y volveremos a trabajar con ellos en el futuro.
+            Estamos satisfechos con el servicio. El equipo demostró alto
+            conocimiento en materiales asépticos. Nos asesoraron y la
+            instalación fue impecable. La calidad de los mater. Volveremos a
+            trabajar con ellos.
           </Review>
         </CajaTexto>
       </Card>

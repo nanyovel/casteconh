@@ -17,7 +17,7 @@ export default function Header({ absolute }) {
       <CajaInterna className="der">
         <NavList>
           <Lista>
-            <Elementos>Home</Elementos>
+            <Elementos>Inicio</Elementos>
             <Elementos>Servicios</Elementos>
             <Elementos>Productos</Elementos>
             <Elementos>Nosotros</Elementos>

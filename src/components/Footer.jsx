@@ -24,12 +24,12 @@ export default function Footer() {
       <Columna>
         <Titulo>Sobre Casteconh</Titulo>
         <Lista>
-          <Item>¿Quienes somos?</Item>
-          <Item>¿Porque elegirnos?</Item>
-          <Item>¿Que dicen nuestros clientes?</Item>
+          <Item>¿Quiénes somos?</Item>
+          <Item>¿Por qué elegirnos?</Item>
+          <Item>¿Qué dicen nuestros clientes?</Item>
           <Item>Historia de nuestra empresa</Item>
-          <Item>Nuestro esquipo</Item>
-          <Item>Filosofia organizacional</Item>
+          <Item>Nuestro equipo</Item>
+          <Item>Filosofía organizacional</Item>
         </Lista>
       </Columna>
 
