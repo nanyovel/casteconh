@@ -7,6 +7,7 @@ import Hero from "./Modulos1Home/Hero";
 import Marcas from "./Modulos1Home/Marcas";
 import CarrucelMarcas from "./Modulos1Home/CarrucerMarcas";
 import Opiniones from "./Modulos1Home/Opiniones";
+import Stats from "./Modulos1Home/Stats";
 
 export default function Home() {
   return (
@@ -66,19 +67,43 @@ export default function Home() {
           <Opiniones />
         </WrapModulo>
       </Seccion>
-      <Seccion className="noPadding">
-        <CajaTitulo className="padding">
-          <WrapCuadro>
-            <CuadroAzul />
-          </WrapCuadro>
-          <TituloSeccion>Que dicen nuestros cliente:</TituloSeccion>
-        </CajaTitulo>
-        <WrapModulo>
-          <Opiniones />
+      <Seccion className="parallax">
+        <WrapModulo className="parallax">
+          <Stats />
         </WrapModulo>
       </Seccion>
 
-      {/* <Seccion></Seccion> */}
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <br />
       <br />
       <br />
@@ -106,6 +131,9 @@ const Seccion = styled.div`
     background-color: ${Theme.primary.azulProfundo};
   }
   &.noPadding {
+    padding: 0;
+  }
+  &.parallax {
     padding: 0;
   }
 `;
@@ -160,15 +188,8 @@ const Parrafo1 = styled.p`
   text-align: center;
   color: ${Theme.primary.mostazaDorado};
 `;
-const Punto = styled.div`
-  width: 0.8rem;
-  height: 0.8rem;
-  background-color: ${Theme.primary.azulProfundo};
-  border-radius: 50%;
-  display: inline-block;
-  margin-left: 5px;
-`;
 const WrapModulo = styled.div`
+  width: 100%;
   &.bgDorado {
     height: 450px;
     width: 100%;

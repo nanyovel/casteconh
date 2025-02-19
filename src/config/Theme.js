@@ -10,12 +10,14 @@ const Theme = {
     azulIntermedio: "#22427A",
     azulOscuro: "#000E30",
     azulBrillante: "#00b9ff",
+    azulBrillante2: "#19b4ef",
     mostazaShadow: "#e7a61a",
   },
   complementarios: {
     terracotaSuave: "#C56E33",
     turquezaOscuro: "#007F7A",
     verdeOliva: "#6B732F",
+    rozadoFlat: "#F88FA4",
   },
   neutral: {
     blacoCalido: "#F1FAEE",
