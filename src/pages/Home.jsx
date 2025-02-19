@@ -54,6 +54,18 @@ export default function Home() {
           <CarrucelMarcas invertido={true} />
         </WrapModulo>
       </Seccion>
+
+      <Seccion className="noPadding">
+        <CajaTitulo className="padding">
+          <WrapCuadro>
+            <CuadroAzul />
+          </WrapCuadro>
+          <TituloSeccion>Que dicen nuestros clientes?</TituloSeccion>
+        </CajaTitulo>
+        <WrapModulo>
+          <Opiniones />
+        </WrapModulo>
+      </Seccion>
       <Seccion className="noPadding">
         <CajaTitulo className="padding">
           <WrapCuadro>
@@ -157,11 +169,11 @@ const Punto = styled.div`
   margin-left: 5px;
 `;
 const WrapModulo = styled.div`
-  padding: 70px 0;
   &.bgDorado {
     height: 450px;
     width: 100%;
     background-color: ${Theme.primary.azulProfundo};
+    padding: 70px 0;
   }
   &.marcas {
     background-image: repeating-linear-gradient(-45deg, #d5a241, #66522e 350px);
