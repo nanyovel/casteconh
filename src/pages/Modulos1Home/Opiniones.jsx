@@ -28,8 +28,7 @@ export default function Opiniones() {
           <Review>
             Estamos satisfechos con el servicio. El equipo demostró alto
             conocimiento en materiales asépticos. Nos asesoraron y la
-            instalación fue impecable. La calidad de los mater. Volveremos a
-            trabajar con ellos.
+            instalación fue impecable. Volveremos a trabajar con ellos.
           </Review>
         </CajaTexto>
       </Card>
