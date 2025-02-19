@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Hero from "./Modulos1Home/Hero";
 import Marcas from "./Modulos1Home/Marcas";
 import CarrucelMarcas from "./Modulos1Home/CarrucerMarcas";
+import Opiniones from "./Modulos1Home/Opiniones";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
             en el mercado de Republica Dominicana.
           </Sub_Parrafo>
         </WrapTitulo>
-        <WrapModulo>
+        <WrapModulo className="marcas">
           <Marcas />
         </WrapModulo>
       </Seccion>
@@ -51,6 +52,17 @@ export default function Home() {
         <WrapModulo className="bgDorado">
           <CarrucelMarcas />
           <CarrucelMarcas invertido={true} />
+        </WrapModulo>
+      </Seccion>
+      <Seccion className="noPadding">
+        <CajaTitulo className="padding">
+          <WrapCuadro>
+            <CuadroAzul />
+          </WrapCuadro>
+          <TituloSeccion>Que dicen nuestros cliente:</TituloSeccion>
+        </CajaTitulo>
+        <WrapModulo>
+          <Opiniones />
         </WrapModulo>
       </Seccion>
 
@@ -150,5 +162,8 @@ const WrapModulo = styled.div`
     height: 450px;
     width: 100%;
     background-color: ${Theme.primary.azulProfundo};
+  }
+  &.marcas {
+    background-image: repeating-linear-gradient(-45deg, #d5a241, #66522e 350px);
   }
 `;

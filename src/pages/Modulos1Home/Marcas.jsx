@@ -146,10 +146,14 @@ const CajaSlider = styled.div`
   z-index: 10;
   padding: 15px;
   box-shadow: ${Theme.config.sombra};
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(10px);
   transition: ease all 0.2s;
   top: 80px;
+
+  background: #00205082; /* Color blanco con transparencia */
+  backdrop-filter: blur(10px); /* Aplica el desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
 `;
 const CajaGlasliner = styled(CajaSlider)`
   right: 0;
