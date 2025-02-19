@@ -8,6 +8,8 @@ import Marcas from "./Modulos1Home/Marcas";
 import CarrucelMarcas from "./Modulos1Home/CarrucerMarcas";
 import Opiniones from "./Modulos1Home/Opiniones";
 import Stats from "./Modulos1Home/Stats";
+import Footer from "../components/Footer";
+import BarraMensaje from "../components/BarraMensaje";
 
 export default function Home() {
   return (
@@ -72,47 +74,12 @@ export default function Home() {
           <Stats />
         </WrapModulo>
       </Seccion>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <BarraMensaje texto="Instalamos higiene nivel laboratorio, sin necesidad de usar bata blanca." />
+      <Footer />
     </Container>
   );
 }
+
 const Container = styled.div`
   width: 100%;
   height: 100px;

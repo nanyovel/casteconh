@@ -14,7 +14,7 @@ export default function Opiniones() {
           <Cargo>Gerente ventas Banco Popular</Cargo>
           <Review>
             Cumplieron con los plazos y el resultado fue impecable. Sin duda,
-            volveremos a trabajar con ellos en futuros proyectos.
+            volveremos a trabajar con Casteconh en futuros proyectos.
           </Review>
         </CajaTexto>
       </Card>
