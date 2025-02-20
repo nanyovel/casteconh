@@ -37,6 +37,9 @@ export const BotonGeneral = styled.button`
     color: #fff;
     color: ${Theme.primary.azulProfundo};
   }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 export const InputGeneral = styled.input`
   border: 1px solid ${Theme.neutral.neutral600};

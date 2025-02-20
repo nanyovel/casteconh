@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Theme from "../config/Theme";
 import ImgLogo from "./../../public/img/logo.png";
+import { Link, NavLink } from "react-router";
 
 export default function Header({ absolute }) {
   return (
@@ -17,12 +18,24 @@ export default function Header({ absolute }) {
       <CajaInterna className="der">
         <NavList>
           <Lista>
-            <Elementos>Inicio</Elementos>
-            <Elementos>Servicios</Elementos>
-            <Elementos>Productos</Elementos>
-            <Elementos>Nosotros</Elementos>
-            <Elementos>Contactos</Elementos>
-            <Elementos>Cuenta</Elementos>
+            <Elementos>
+              <Enlaces to={"/"}>Inicio</Enlaces>
+            </Elementos>
+            <Elementos>
+              <Enlaces to={"/servicios"}>Servicios</Enlaces>
+            </Elementos>
+            <Elementos>
+              <Enlaces to={"/productos"}>Productos</Enlaces>
+            </Elementos>
+            <Elementos>
+              <Enlaces to={"/nosotros"}>Nosotros</Enlaces>
+            </Elementos>
+            <Elementos>
+              <Enlaces to={"/contactos"}>Contactos</Enlaces>
+            </Elementos>
+            <Elementos>
+              <Enlaces to={"/cuenta"}>Cuenta</Enlaces>
+            </Elementos>
           </Lista>
         </NavList>
       </CajaInterna>
@@ -77,9 +90,17 @@ const Lista = styled.ul`
   display: flex;
   gap: 20px;
 `;
-const Elementos = styled.li`
+const Elementos = styled.li``;
+
+const Enlaces = styled(Link)`
   font-size: 1.1rem;
+  color: inherit;
+  text-decoration: none;
   &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &:target {
     text-decoration: underline;
     cursor: pointer;
   }

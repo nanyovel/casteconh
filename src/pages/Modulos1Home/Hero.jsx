@@ -80,14 +80,16 @@ export default function Hero() {
                 <WrapSubtitulo>
                   <SubTitulo>{foto.subTitulo}</SubTitulo>
                 </WrapSubtitulo>
-                <CajaBtn>
-                  <BtnSimple>Mas info.</BtnSimple>
-                </CajaBtn>
               </CajaTexto>
             </Frosting>
           </React.Fragment>
         ))}
       </Container>
+      {/* <CajaCta>
+        <CajaBtn>
+          <BtnSimple>Mas info.</BtnSimple>
+        </CajaBtn>
+      </CajaCta> */}
     </ContainerPadre>
   );
 }
@@ -101,6 +103,7 @@ const ContainerPadre = styled.div`
   background-color: ${Theme.primary.azulSuave};
   width: 100vw;
   margin-bottom: 150px;
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -182,17 +185,26 @@ const WrapSubtitulo = styled.div`
   min-height: 50px;
 `;
 const SubTitulo = styled.h2`
-  /* background-color: black; */
   width: 100%;
   text-align: center;
   color: white;
   font-weight: 400;
+  padding: 10px;
 `;
 const CajaBtn = styled.div`
   width: 100%;
-  /* display: flex; */
-  /* justify-content: center; */
 `;
 const BtnSimple = styled(BotonGeneral)`
   z-index: 10000;
+  font-weight: bold;
+  background-color: aliceblue;
+`;
+
+const CajaCta = styled.div`
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  bottom: 150px;
+  left: 100px;
 `;
