@@ -31,7 +31,7 @@ export default function Header({ absolute }) {
               <Enlaces to={"/nosotros"}>Nosotros</Enlaces>
             </Elementos>
             <Elementos>
-              <Enlaces to={"/contactos"}>Contactos</Enlaces>
+              <Enlaces to={"/contacto"}>Contacto</Enlaces>
             </Elementos>
             <Elementos>
               <Enlaces to={"/cuenta"}>Cuenta</Enlaces>
