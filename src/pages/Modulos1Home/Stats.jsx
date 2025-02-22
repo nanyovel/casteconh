@@ -52,7 +52,7 @@ const Container = styled.div`
 const CajaImg = styled.div`
   width: 100%;
   height: 50vh;
-  background-image: url("./../../public/img/quirofano4.jpg");
+  background-image: url("/img/quirofano4.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;

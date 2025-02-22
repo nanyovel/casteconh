@@ -175,10 +175,10 @@ const CajaParallax = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url("./../../public/img/receid.jpg");
+  background-image: url("/img/receid.jpg");
   margin-bottom: 100px;
   &.dorado {
-    background-image: url("./../../public/img/receid2.jpg");
+    background-image: url("/img/receid2.jpg");
   }
 `;
 const CapaFrosting = styled.div`
