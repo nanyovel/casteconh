@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Theme from "../config/Theme";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FormContact from "../components/FormContact";
 
 export default function Contacto() {
   return (
@@ -12,6 +13,29 @@ export default function Contacto() {
         <BarraTitulo>
           <Titulo>Contacto</Titulo>
         </BarraTitulo>
+
+        <CajaParallax>
+          <CapaFrosting>
+            <CajaContenido>
+              <WrapTextoImg>
+                <CajaInterna>
+                  <MapaGoogle
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.0523470595954!2d-68.4428370229441!3d18.66164681964713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf3718e1b49321%3A0x9a8dd17d487c617b!2sCASTECONH!5e0!3m2!1ses-419!2sdo!4v1739970822753!5m2!1ses-419!2sdo"
+                    // width="600"
+                    // height="450"
+                    //   style="border:0;"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </CajaInterna>
+                <CajaInterna className="form">
+                  <FormContact />
+                </CajaInterna>
+              </WrapTextoImg>
+            </CajaContenido>
+          </CapaFrosting>
+        </CajaParallax>
       </Container>
       <Footer />
     </>
@@ -79,6 +103,8 @@ const WrapTextoImg = styled.div`
   display: flex;
   margin-bottom: 30px;
   gap: 30px;
+  justify-content: center;
+
   &.reverse {
     flex-direction: row-reverse;
     margin-bottom: 180px;
@@ -93,14 +119,9 @@ const WrapTextoImg = styled.div`
 
 const CajaInterna = styled.div`
   width: 48%;
-  &.texto {
-    align-content: center;
-    @media screen and (max-width: 970px) {
-      width: 80%;
-    }
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
+  &.form {
+    display: flex;
+    align-items: center;
   }
   &.cajaImg {
     position: relative;
@@ -137,4 +158,18 @@ const Parrafo = styled.p`
   line-height: 1.6rem;
   font-size: 1.2rem;
   color: white;
+`;
+const CajaForm = styled.div`
+  height: 100%;
+  width: 100%;
+`;
+const MapaGoogle = styled.iframe`
+  width: 100%;
+  margin: 0;
+  display: block;
+  /* margin: auto; */
+  height: 500px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.43);
 `;

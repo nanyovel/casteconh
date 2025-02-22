@@ -12,33 +12,23 @@ export const BotonGeneral = styled.button`
   border: 1px solid transparent;
   outline: none;
   font-size: 1rem;
-  background-color: ${Theme.secondary.mostazaOscuro};
-  color: ${Theme.primary.azulProfundo};
+  background-color: ${Theme.complementary.terracotaSuave};
   box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.43);
   display: inline-block;
-
-  &:focus {
-    background-color: ${Theme.secondary.mostazaOscuro};
-    /* background-color: ${Theme.primary.azulProfundo}; */
-    color: black;
-    /* color: ${Theme.primary.mostazaDorado}; */
-    border: 1px solid ${Theme.secondary.azulProfundo};
-    border: 1px solid ${Theme.primary.mostazaDorado};
-  }
+  color: white;
 
   &:hover {
-    background-color: ${Theme.secondary.mostazaOscuro};
-    /* color: ${Theme.primary.mostazaDorado}; */
-    color: ${Theme.neutral.grisCalido};
-    /* color: red; */
-  }
-  &:active {
-    background-color: ${Theme.secondary.mostazaTenue};
-    color: #fff;
-    color: ${Theme.primary.azulProfundo};
-  }
-  &:hover {
+    color: ${Theme.complementary.terracotaSuave};
     cursor: pointer;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: white;
+    background-color: #955124;
+  }
+  &:focus {
+    border: 1px solid ${Theme.secondary.azulBrillante};
   }
 `;
 export const InputGeneral = styled.input`

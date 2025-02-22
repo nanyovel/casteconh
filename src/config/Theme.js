@@ -13,7 +13,7 @@ const Theme = {
     azulBrillante2: "#19b4ef",
     mostazaShadow: "#e7a61a",
   },
-  complementarios: {
+  complementary: {
     terracotaSuave: "#C56E33",
     turquezaOscuro: "#007F7A",
     verdeOliva: "#6B732F",
