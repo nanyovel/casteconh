@@ -55,10 +55,10 @@ export default function Nosotros() {
             </CajaContenido>
           </CapaFrosting>
         </CajaParallax>
-        <CajaParallax className="dorado">
-          <CapaFrosting className="dorado">
+        <CajaParallax className="dorado ">
+          <CapaFrosting className="dorado ">
             <CajaContenido>
-              <WrapTextoImg>
+              <WrapTextoImg className="reverse">
                 <CajaInterna className="cajaImg">
                   <Img src={ImgParallax2} />
                 </CajaInterna>
@@ -94,7 +94,54 @@ export default function Nosotros() {
           </CapaFrosting>
         </CajaParallax>
 
-        <CajaCultura></CajaCultura>
+        <TituloLess className="filosofia">Filosofia organizacional</TituloLess>
+        <CajaCultura>
+          <InternaCultura>
+            <TituloCultura>Mision</TituloCultura>
+            <ParrafoCultura>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate placeat quam veritatis repellat delectus consequuntur
+              adipisci omnis quia maiores labore quod blanditiis vel, doloribus
+              distinctio at dignissimos, fuga facere suscipit.
+              <br />
+              <br />
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Molestiae minima reprehenderit culpa modi necessitatibus labore
+              nemo nostrum animi at, rerum consectetur praesentium fugiat
+              dolorum aut esse porro nulla, facere inventore.
+            </ParrafoCultura>
+          </InternaCultura>
+          <InternaCultura>
+            <TituloCultura>Vision</TituloCultura>
+            <ParrafoCultura>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate placeat quam veritatis repellat delectus consequuntur
+              adipisci omnis quia maiores labore quod blanditiis vel, doloribus
+              distinctio at dignissimos, fuga facere suscipit.
+              <br />
+              <br />
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Molestiae minima reprehenderit culpa modi necessitatibus labore
+              nemo nostrum animi at, rerum consectetur praesentium fugiat
+              dolorum aut esse porro nulla, facere inventore.
+            </ParrafoCultura>
+          </InternaCultura>
+          <InternaCultura>
+            <TituloCultura>Valores</TituloCultura>
+            <ParrafoCultura>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate placeat quam veritatis repellat delectus consequuntur
+              adipisci omnis quia maiores labore quod blanditiis vel, doloribus
+              distinctio at dignissimos, fuga facere suscipit.
+              <br />
+              <br />
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Molestiae minima reprehenderit culpa modi necessitatibus labore
+              nemo nostrum animi at, rerum consectetur praesentium fugiat
+              dolorum aut esse porro nulla, facere inventore.
+            </ParrafoCultura>
+          </InternaCultura>
+        </CajaCultura>
       </Container>
       <br />
       <br />
@@ -228,9 +275,40 @@ const Parrafo = styled.p`
 const TituloLess = styled.h3`
   font-size: 2rem;
   text-decoration: underline;
-  color: ${Theme.primary.azulProfundo};
-  color: white;
+  color: ${Theme.primary.mostazaDorado};
+  /* color: white; */
+  &.filosofia {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
 `;
 
-const CajaCultura = styled.div``;
-// const
+const CajaCultura = styled.div`
+  width: 100%;
+  display: flex;
+  padding: 0 200px;
+  gap: 10px;
+`;
+const InternaCultura = styled.div`
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+const TituloCultura = styled.h3`
+  width: 100%;
+  font-size: 2rem;
+  color: ${Theme.primary.azulProfundo};
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 5px;
+`;
+const ParrafoCultura = styled.p`
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: center;
+  color: ${Theme.neutral.neutral600};
+  line-height: 1.6rem;
+  /* color: #282828; */
+`;
