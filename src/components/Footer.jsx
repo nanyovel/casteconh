@@ -62,7 +62,7 @@ export default function Footer() {
           <Titulo>Servicios</Titulo>
           <Lista>
             {servicios.map((ser, index) => {
-              return <Item>{ser.nombre}</Item>;
+              return <Item key={index}>{ser.nombre}</Item>;
             })}
           </Lista>
         </CajaSeccion>
