@@ -9,46 +9,63 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import ImgLogo from "./../../public/img/logo.png";
+import { servicios } from "../lib/Servicios";
 
 export default function Footer() {
   return (
     <Container>
       <Columna className="logo">
-        <Img src={ImgLogo} />
-        <TituloSara>Casteconh</TituloSara>
-        <SubTituloSara>
-          Soluciones asépticas para espacios que exigen higiene y seguridad.
-        </SubTituloSara>
+        <CajaSeccion className="logo">
+          <Img src={ImgLogo} />
+          <TituloSara>Casteconh</TituloSara>
+          <SubTituloSara>
+            Soluciones asépticas para espacios que exigen higiene y seguridad.
+          </SubTituloSara>
+        </CajaSeccion>
+        <CajaSeccion className="redes">
+          <Titulo>Redes sociales</Titulo>
+          <CajaRRSS>
+            <Icono icon={faYoutube} />
+            <Icono icon={faInstagram} />
+            <Icono icon={faLinkedin} />
+            <Icono icon={faFacebook} />
+          </CajaRRSS>
+        </CajaSeccion>
       </Columna>
 
       <Columna>
-        <Titulo>Sobre Casteconh</Titulo>
-        <Lista>
-          <Item>¿Quiénes somos?</Item>
-          <Item>¿Por qué elegirnos?</Item>
-          <Item>¿Qué dicen nuestros clientes?</Item>
-          <Item>Historia de nuestra empresa</Item>
-          <Item>Nuestro equipo</Item>
-          <Item>Filosofía organizacional</Item>
-        </Lista>
+        <CajaSeccion>
+          <Titulo>Sobre Casteconh</Titulo>
+          <Lista>
+            <Item>¿Quiénes somos?</Item>
+            <Item>¿Por qué elegirnos?</Item>
+            <Item>¿Qué dicen nuestros clientes?</Item>
+            <Item>Historia de nuestra empresa</Item>
+            <Item>Nuestro equipo</Item>
+            <Item>Filosofía organizacional</Item>
+          </Lista>
+        </CajaSeccion>
+        <CajaSeccion>
+          <Titulo>Enlaces de interes</Titulo>
+          <Lista>
+            <Item>Contactos</Item>
+            <Item>Donde encontrarnos</Item>
+            <Item>Registrate</Item>
+            <Item>Preguntas frecuentes</Item>
+            <Item>Quejas y reclamaciones</Item>
+          </Lista>
+        </CajaSeccion>
       </Columna>
 
       <Columna>
-        <Titulo>Enlaces de interes</Titulo>
-        <Lista>
-          <Item>Contactos</Item>
-          <Item>Donde encontrarnos</Item>
-          <Item>Registrate</Item>
-          <Item>Preguntas frecuentes</Item>
-          <Item>Quejas y reclamaciones</Item>
-        </Lista>
-        <Titulo>Redes sociales</Titulo>
-        <CajaRRSS>
-          <Icono icon={faYoutube} />
-          <Icono icon={faInstagram} />
-          <Icono icon={faLinkedin} />
-          <Icono icon={faFacebook} />
-        </CajaRRSS>
+        <CajaSeccion>
+          <Titulo>Servicios</Titulo>
+          <Lista>
+            {servicios.map((ser, index) => {
+              return <Item>{ser.nombre}</Item>;
+            })}
+          </Lista>
+        </CajaSeccion>
       </Columna>
 
       <Columna className="sinBordes">
@@ -159,7 +176,7 @@ const CajaRRSS = styled.div`
 const Icono = styled(FontAwesomeIcon)`
   font-size: 2rem;
 
-  color: ${Theme.primary.azulProfundo};
+  color: ${Theme.primary.mostazaDorado};
   cursor: pointer;
   border: 2px solid;
   padding: 5px;
@@ -168,5 +185,19 @@ const Icono = styled(FontAwesomeIcon)`
   &:hover {
     background-color: ${Theme.secondary.mostazaClaro};
     color: ${Theme.neutral.neutral650};
+  }
+`;
+const CajaSeccion = styled.div`
+  &.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin-bottom: 15px;
+  }
+  &.redes {
+    width: 100%;
+    padding: 6px;
   }
 `;
