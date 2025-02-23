@@ -1,44 +1,9 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import Theme from "../../config/Theme";
+import { servicios } from "../../lib/Servicios";
 
 export default function CarrucelMarcas({ invertido }) {
-  const servicios = [
-    {
-      icono: "https://i.ibb.co/S4wms8vC/escalera.png",
-      nombre: "Diseño de interiores",
-    },
-    {
-      icono: "https://i.ibb.co/pB4vzhkf/inspeccion-de-ventanas.png",
-      nombre: "Diseño de exteriores",
-    },
-    {
-      icono: "https://i.ibb.co/HDCcKdwK/trabajadores.png",
-      nombre: "Contruccion ligera",
-    },
-    {
-      icono:
-        "https://firebasestorage.googleapis.com/v0/b/breakkoi.firebasestorage.app/o/casteconh%2Fbulbo.png?alt=media&token=cf45769f-0083-4ea6-99b9-fe23e9cd549a",
-      nombre: "Instalaciones electricas",
-    },
-    {
-      icono: "https://i.ibb.co/Cp0dNvyw/climatizacion.png",
-      nombre: "Climatizacion",
-    },
-    {
-      icono: "https://i.ibb.co/PZDZc8cN/proteccion.png",
-      nombre: "Materiales asepticos",
-    },
-    {
-      icono: "https://i.ibb.co/fzpgWjT9/muro.png",
-      nombre: "Revestimientos asepticos.",
-    },
-    {
-      icono: "https://i.ibb.co/fzpgWjT9/muro.png",
-      nombre: "Revestimientos decorativos.",
-    },
-  ];
-
   const duplicatedService = [
     ...servicios,
     ...servicios,
@@ -91,13 +56,14 @@ const LogoTrack = styled.div`
 const Logo = styled.div`
   flex: 0 0 auto;
   width: 220px; /* Ajusta el tamaño del logo */
-  height: 100px;
+  height: 110px;
   margin: 0 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   box-shadow: ${Theme.config.sombra};
+  padding: 8px;
 
   img {
     max-width: 100%;

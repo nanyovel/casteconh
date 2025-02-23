@@ -54,8 +54,8 @@ export default function Nosotros() {
             </CajaContenido>
           </CapaFrosting>
         </CajaParallax>
-        <CajaParallax className="dorado ">
-          <CapaFrosting className="dorado ">
+        <CajaParallax className=" ">
+          <CapaFrosting className=" ">
             <CajaContenido>
               <WrapTextoImg className="reverse">
                 <CajaInterna className="cajaImg">
@@ -263,6 +263,7 @@ const Parrafo = styled.p`
   line-height: 1.6rem;
   font-size: 1.2rem;
   color: white;
+  text-align: center;
 `;
 
 const TituloLess = styled.h3`
@@ -308,6 +309,6 @@ const ParrafoCultura = styled.p`
 `;
 const Lista = styled.ul`
   text-align: start;
-  padding-left: 60px;
+  padding-left: 35%;
 `;
 const Elemento = styled.li``;
