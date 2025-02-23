@@ -21,6 +21,6 @@ const Titulo = styled.h2`
   color: ${Theme.primary.azulProfundo};
   width: 100%;
   text-align: center;
-  font-size: 4rem;
+  font-size: 3.5rem;
   /* font-weight: lighter; */
 `;
