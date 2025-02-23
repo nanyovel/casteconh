@@ -304,7 +304,7 @@ const TituloCultura = styled.h3`
 const ParrafoCultura = styled.p`
   width: 100%;
   font-size: 1.2rem;
-  text-align: center;
+  text-align: justify;
   color: ${Theme.neutral.neutral600};
   line-height: 1.6rem;
   /* color: #282828; */

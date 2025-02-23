@@ -9,7 +9,7 @@ import Contacto from "../pages/Contacto";
 import Login from "../auth/Login";
 import Registrarse from "../auth/Registrarse";
 import ResetPassword from "../auth/ResetPassword";
-import Servicios from "../pages/Servicios";
+import ServiciosPage from "../pages/Serviciospage";
 
 export default function MasterRoutes() {
   return (
@@ -18,7 +18,7 @@ export default function MasterRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/servicios" element={<Servicios />} />
+        <Route path="/servicios" element={<ServiciosPage />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registrarse />} />

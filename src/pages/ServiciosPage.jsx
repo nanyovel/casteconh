@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import FormContact from "../components/FormContact";
 import TituloPage from "../components/TituloPage";
 
-export default function Servicios() {
+export default function ServiciosPage() {
   return (
     <>
       <Header />
