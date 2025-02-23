@@ -12,15 +12,15 @@ export default function TituloPage({ titulo }) {
 
 const BarraTitulo = styled.div`
   background-color: ${Theme.primary.mostazaDorado};
-  height: 200px;
+  height: 140px;
   width: 100%;
   align-content: center;
-  margin: 100px 0;
+  margin: 40px 0;
 `;
 const Titulo = styled.h2`
   color: ${Theme.primary.azulProfundo};
   width: 100%;
   text-align: center;
   font-size: 4rem;
-  font-weight: lighter;
+  /* font-weight: lighter; */
 `;

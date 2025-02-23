@@ -98,46 +98,40 @@ export default function Nosotros() {
           <InternaCultura>
             <TituloCultura>Mision</TituloCultura>
             <ParrafoCultura>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate placeat quam veritatis repellat delectus consequuntur
-              adipisci omnis quia maiores labore quod blanditiis vel, doloribus
-              distinctio at dignissimos, fuga facere suscipit.
-              <br />
-              <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestiae minima reprehenderit culpa modi necessitatibus labore
-              nemo nostrum animi at, rerum consectetur praesentium fugiat
-              dolorum aut esse porro nulla, facere inventore.
+              Brindar soluciones innovadoras y de alta calidad en revestimientos
+              para construcción, mejorando la estética, durabilidad y
+              funcionalidad de los espacios. Nos enfocamos en la satisfacción de
+              nuestros clientes mediante el uso de materiales sostenibles,
+              tecnología avanzada y un equipo de profesionales altamente
+              capacitados. Buscamos contribuir al desarrollo del sector con
+              prácticas responsables y eficientes, garantizando excelencia en
+              cada proyecto.
             </ParrafoCultura>
           </InternaCultura>
           <InternaCultura>
             <TituloCultura>Vision</TituloCultura>
             <ParrafoCultura>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate placeat quam veritatis repellat delectus consequuntur
-              adipisci omnis quia maiores labore quod blanditiis vel, doloribus
-              distinctio at dignissimos, fuga facere suscipit.
-              <br />
-              <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestiae minima reprehenderit culpa modi necessitatibus labore
-              nemo nostrum animi at, rerum consectetur praesentium fugiat
-              dolorum aut esse porro nulla, facere inventore.
+              Ser la empresa líder en soluciones de revestimiento, ofreciendo
+              productos y servicios innovadores y sostenibles que transformen
+              los espacios con calidad, eficiencia y diseño. Nos comprometemos a
+              superar las expectativas de nuestros clientes a través de
+              tecnología avanzada, materiales de alta durabilidad y un equipo
+              altamente capacitado, contribuyendo al desarrollo de proyectos
+              arquitectónicos modernos y funcionales.
             </ParrafoCultura>
           </InternaCultura>
           <InternaCultura>
             <TituloCultura>Valores</TituloCultura>
             <ParrafoCultura>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate placeat quam veritatis repellat delectus consequuntur
-              adipisci omnis quia maiores labore quod blanditiis vel, doloribus
-              distinctio at dignissimos, fuga facere suscipit.
-              <br />
-              <br />
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Molestiae minima reprehenderit culpa modi necessitatibus labore
-              nemo nostrum animi at, rerum consectetur praesentium fugiat
-              dolorum aut esse porro nulla, facere inventore.
+              <Lista>
+                <Elemento>Calidad</Elemento>
+                <Elemento>Innovación</Elemento>
+                <Elemento>Compromiso</Elemento>
+                <Elemento>Sostenibilidad</Elemento>
+                <Elemento>Trabajo en equipo</Elemento>
+                <Elemento>Seguridad</Elemento>
+                <Elemento>Honestidad</Elemento>
+              </Lista>
             </ParrafoCultura>
           </InternaCultura>
         </CajaCultura>
@@ -291,8 +285,9 @@ const CajaCultura = styled.div`
 `;
 const InternaCultura = styled.div`
   padding: 10px;
+  width: 33%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
 `;
 const TituloCultura = styled.h3`
@@ -311,3 +306,8 @@ const ParrafoCultura = styled.p`
   line-height: 1.6rem;
   /* color: #282828; */
 `;
+const Lista = styled.ul`
+  text-align: start;
+  padding-left: 60px;
+`;
+const Elemento = styled.li``;

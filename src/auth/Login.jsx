@@ -79,7 +79,6 @@ export default function Login() {
 
 const CajaContenido = styled.div`
   min-height: 200px;
-  padding: 0 25px;
 `;
 
 const WrapInputs = styled.div`
