@@ -265,7 +265,7 @@ const Parrafo = styled.p`
   line-height: 1.6rem;
   font-size: 1.2rem;
   color: white;
-  text-align: center;
+  text-align: justify;
 `;
 
 const TituloLess = styled.h3`

@@ -12,6 +12,9 @@ export default function Servicios() {
       <Header />
       <Container>
         <TituloPage titulo={"Servicios"} />
+        <WrapService>
+          <CardService></CardService>
+        </WrapService>
       </Container>
       <Footer />
     </>
@@ -21,3 +24,5 @@ const Container = styled.div`
   width: 100%;
   min-height: 200px;
 `;
+const WrapService = styled.div``;
+const CardService = styled.div``;
