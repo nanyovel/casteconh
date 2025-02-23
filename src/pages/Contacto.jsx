@@ -4,15 +4,14 @@ import Theme from "../config/Theme";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FormContact from "../components/FormContact";
+import TituloPage from "../components/TituloPage";
 
 export default function Contacto() {
   return (
     <>
       <Header />
       <Container>
-        <BarraTitulo>
-          <Titulo>Contacto</Titulo>
-        </BarraTitulo>
+        <TituloPage titulo={"Contacto"} />
 
         <CajaParallax>
           <CapaFrosting>

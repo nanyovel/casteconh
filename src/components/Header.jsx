@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Theme from "../config/Theme";
 import ImgLogo from "./../../public/img/logo.png";
 import { Link, NavLink } from "react-router";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Header({ absolute }) {
   return (
@@ -34,7 +36,12 @@ export default function Header({ absolute }) {
               <Enlaces to={"/contacto"}>Contacto</Enlaces>
             </Elementos>
             <Elementos>
-              <Enlaces to={"/cuenta"}>Cuenta</Enlaces>
+              <Enlaces to={"/login"}>Iniciar Sesion</Enlaces>
+            </Elementos>
+            <Elementos className="registrarse">
+              <Enlaces to={"/registro"} className="registrarse">
+                Registrarse
+              </Enlaces>
             </Elementos>
           </Lista>
         </NavList>
@@ -42,7 +49,9 @@ export default function Header({ absolute }) {
     </Container>
   );
 }
-
+const Icono = styled(FontAwesomeIcon)`
+  /* color: white; */
+`;
 const Container = styled.div`
   width: 100%;
   height: 80px;
@@ -90,12 +99,22 @@ const Lista = styled.ul`
   display: flex;
   gap: 20px;
 `;
-const Elementos = styled.li``;
+const Elementos = styled.li`
+  /* border: 1px solid red; */
+  align-content: center;
+`;
 
 const Enlaces = styled(Link)`
   font-size: 1.1rem;
+  font-size: 15px;
   color: inherit;
   text-decoration: none;
+  white-space: nowrap;
+  &.registrarse {
+    border: 2px solid ${Theme.primary.mostazaDorado};
+    border-radius: 4px;
+    padding: 8px;
+  }
   &:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -103,5 +122,10 @@ const Enlaces = styled(Link)`
   &:target {
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  &.log {
+    display: flex;
+    flex-direction: column;
   }
 `;

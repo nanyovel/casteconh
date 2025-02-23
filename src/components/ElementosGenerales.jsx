@@ -3,7 +3,11 @@ import React from "react";
 import Theme from "../config/Theme";
 
 export const BotonGeneral = styled.button`
-  margin: 10px;
+  margin: 5px;
+  cursor: pointer;
+
+  border-radius: 5px;
+  height: 35px;
   cursor: pointer;
 
   border-radius: 5px;
@@ -19,6 +23,7 @@ export const BotonGeneral = styled.button`
 
   &:hover {
     color: ${Theme.complementary.terracotaSuave};
+    border: 1px solid black;
     cursor: pointer;
     background-color: #ffffff;
   }
@@ -32,16 +37,34 @@ export const BotonGeneral = styled.button`
   }
 `;
 export const InputGeneral = styled.input`
-  border: 1px solid ${Theme.neutral.neutral600};
-  outline: none;
-  height: 30px;
-  border-radius: 4px;
-  padding: 5px;
-  background-color: ${Theme.neutral.blancoHueso};
+  width: 100%;
 
-  /* width: 200px; */
-  min-width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  outline: none;
+  padding: 10px;
+  color: ${Theme.neutral.neutral650};
+  background-color: ${Theme.complementary.terracotaSuave};
+  background-color: ${Theme.neutral.neutral200};
   &:focus {
-    border: 1px solid ${Theme.secondary.azulBrillante};
+    /* border: 1px solid ${Theme.secondary.azulBrillante}; */
+  }
+`;
+
+export const TextAreaGeneral = styled.textarea`
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #000;
+  outline: none;
+  padding: 10px;
+  color: ${Theme.neutral.neutral650};
+  background-color: ${Theme.neutral.neutral200};
+  min-height: 80px;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+
+  &:focus {
+    /* border: 1px solid ${Theme.secondary.azulBrillante}; */
   }
 `;

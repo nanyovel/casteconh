@@ -5,15 +5,14 @@ import styled from "styled-components";
 import Theme from "../config/Theme";
 import ImgParallax from "./../../public/img/receid.jpg";
 import ImgParallax2 from "./../../public/img/receid2.jpg";
+import TituloPage from "../components/TituloPage";
 
 export default function Nosotros() {
   return (
     <>
       <Header />
       <Container>
-        <BarraTitulo>
-          <Titulo>Sobre nosotros</Titulo>
-        </BarraTitulo>
+        <TituloPage titulo={"Sobre nosotros"} />
 
         <CajaParallax>
           <CapaFrosting>

@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import Theme from "../config/Theme";
-import { BotonGeneral } from "./ElementosGenerales";
+import {
+  BotonGeneral,
+  InputGeneral,
+  TextAreaGeneral,
+} from "./ElementosGenerales";
 
 export default function FormContact({ userMaster }) {
   const initialValue = {
@@ -45,6 +49,7 @@ export default function FormContact({ userMaster }) {
           value={datos.nombre}
           name="nombre"
           onChange={(e) => handleInput(e)}
+          placeholder="Nombre"
         />
       </CajaInput>
       <CajaInput>
@@ -54,6 +59,7 @@ export default function FormContact({ userMaster }) {
           onChange={(e) => handleInput(e)}
           name="telefono"
           value={datos.telefono}
+          placeholder="Telefono"
         />
       </CajaInput>
       <CajaInput>
@@ -63,6 +69,7 @@ export default function FormContact({ userMaster }) {
           onChange={(e) => handleInput(e)}
           name="correo"
           value={datos.correo}
+          placeholder="Correo"
         />
       </CajaInput>
       <CajaInput>
@@ -72,6 +79,7 @@ export default function FormContact({ userMaster }) {
           onChange={(e) => handleInput(e)}
           name="mensaje"
           value={datos.mensaje}
+          placeholder="Mensaje"
         />
       </CajaInput>
       <BtnSimple onClick={() => enviarMensaje()}>Enviar</BtnSimple>
@@ -112,7 +120,7 @@ const TituloInput = styled.p`
   color: #d5a241;
   /* color: red; */
 `;
-const Input = styled.input`
+const Input2 = styled.input`
   width: 100%;
   height: 40px;
   border-radius: 5px;
@@ -122,7 +130,9 @@ const Input = styled.input`
   color: white;
   background-color: ${Theme.complementary.terracotaSuave};
 `;
-const TextArea = styled.textarea`
+const Input = styled(InputGeneral)``;
+const TextArea = styled(TextAreaGeneral)``;
+const TextArea2 = styled.textarea`
   width: 100%;
   border-radius: 5px;
   border: 1px solid #000;
