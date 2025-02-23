@@ -74,7 +74,10 @@ export default function Home() {
           <Stats />
         </WrapModulo>
       </Seccion>
-      <BarraMensaje texto="Instalamos higiene nivel laboratorio, sin necesidad de usar bata blanca." />
+      <BarraMensaje
+        texto="¡Construimos tus sueños!
+"
+      />
       <Footer />
     </Container>
   );
