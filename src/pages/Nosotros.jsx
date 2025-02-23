@@ -65,27 +65,29 @@ export default function Nosotros() {
                   <TituloLess>Historia</TituloLess>
                   <br />
                   <Parrafo>
-                    Casteconh nace en el 2017 como una solución a la necesidad
-                    de cubrir de manera eficiente los requerimientos de espacios
-                    asépticos en diversos sectores. Desde el inicio, nuestro
-                    objetivo ha sido ofrecer soluciones innovadoras que
-                    garanticen higiene, seguridad y funcionalidad en cada
-                    proyecto.
+                    CASTECONH SRL se fundó el 25 de Marzo de 2020, inicialmente
+                    liderada por el Ing. Felipe Antonio Castro Ubiera, quien
+                    prestaba servicios como persona física. La demanda creciente
+                    de sus clientes exigió contar con más colaboradores, lo que
+                    motivó la creación de la empresa. Está compuesta por cuatro
+                    hermanos con profesiones diversas: ingeniería civil,
+                    contabilidad, administración turística y seguridad
+                    cibernética. CASTECONH ofrece productos y servicios de alta
+                    calidad en el sector de la construcción, basados en
+                    innovación, sostenibilidad y excelencia en el servicio.
                     <br />
                     <br />
-                    Hemos crecido a lo largo de los años, consolidándonos como
-                    un referente en la industria. A medida que evolucionamos,
-                    incorporamos nuevas tecnologías y mejoramos constantemente
-                    nuestros procesos para asegurar que cada cliente reciba el
-                    mejor servicio y productos que se adapten a sus necesidades.
+                    CASTECONH SRL es una empresa dedicada a ofrecer servicios y
+                    productos de calidad superior en la construcción. La empresa
+                    se distingue por su enfoque innovador, utilizando
+                    tecnologías avanzadas y prácticas sostenibles, lo que
+                    asegura construcciones responsables con el medio ambiente.
+                    Nuestro compromiso con la excelencia en el servicio se
+                    refleja en la atención personalizada y productos de alta
+                    calidad.
                   </Parrafo>
                   <br />
-                  <Parrafo>
-                    Hoy en día, Casteconh se continúa expandiendo, manteniendo
-                    su esencia, eficiencia e innovación. Nuestra historia es el
-                    reflejo de un esfuerzo constante por superar expectativas y
-                    contribuir al desarrollo de espacios más seguros.
-                  </Parrafo>
+
                   <br />
                 </CajaInterna>
               </WrapTextoImg>
