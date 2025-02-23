@@ -9,7 +9,6 @@ import Contacto from "../pages/Contacto";
 import Login from "../auth/Login";
 import Registrarse from "../auth/Registrarse";
 import ResetPassword from "../auth/ResetPassword";
-import ServiciosPage from "../pages/Serviciospage";
 
 export default function MasterRoutes() {
   return (
