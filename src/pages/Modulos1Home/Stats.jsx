@@ -34,7 +34,7 @@ export default function Stats() {
       <CajaFrosting>
         {isVisible && (
           <>
-            <CardStats qty={8} titulo="Años de experiencia" img={ImgBiz} />
+            <CardStats qty={5} titulo="Años de experiencia" img={ImgBiz} />
             <CardStats qty={12} titulo="Productos disponibles" img={ImgBiMat} />
             <CardStats qty={47} titulo="Proyectos realizados" img={ImgProy} />
           </>

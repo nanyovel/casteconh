@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import ImgLogo from "./../../public/img/logo.png";
 import { servicios } from "../lib/Servicios";
+import { Link } from "react-router";
 
 export default function Footer() {
   return (
@@ -35,24 +36,33 @@ export default function Footer() {
 
       <Columna>
         <CajaSeccion>
-          <Titulo>Sobre Casteconh</Titulo>
+          <Titulo>Enlaces de interes</Titulo>
           <Lista>
-            <Item>¿Quiénes somos?</Item>
-            <Item>¿Por qué elegirnos?</Item>
-            <Item>¿Qué dicen nuestros clientes?</Item>
-            <Item>Historia de nuestra empresa</Item>
-            <Item>Nuestro equipo</Item>
-            <Item>Filosofía organizacional</Item>
+            <Item>
+              <Enlaces to={"/nosotros"}>¿Quiénes somos?</Enlaces>
+            </Item>
+            <Item>
+              <Enlaces to={"/#porqueElefi"}>¿Por qué elegirnos?</Enlaces>
+            </Item>
+            <Item>
+              <Enlaces to={"/nosotros"}>Historia de nuestra empresa</Enlaces>
+            </Item>
+            <Item>
+              <Enlaces to={"/productos"}>Productos</Enlaces>
+            </Item>
+            <Item>
+              <Enlaces to={"/servicios"}>Servicios</Enlaces>
+            </Item>
           </Lista>
         </CajaSeccion>
         <CajaSeccion>
-          <Titulo>Enlaces de interes</Titulo>
+          {/* <Titulo>Enlaces de interes</Titulo> */}
           <Lista>
-            <Item>Contactos</Item>
-            <Item>Donde encontrarnos</Item>
-            <Item>Registrate</Item>
-            <Item>Preguntas frecuentes</Item>
-            <Item>Quejas y reclamaciones</Item>
+            {/* <Item><Enlaces to={"/contacto"}>Contacto</Enlaces></Item> */}
+            {/* <Item>Donde encontrarnos</Item> */}
+            {/* <Item>Registrate</Item> */}
+            {/* <Item>Preguntas frecuentes</Item> */}
+            {/* <Item>Quejas y reclamaciones</Item> */}
           </Lista>
         </CajaSeccion>
       </Columna>
@@ -62,7 +72,11 @@ export default function Footer() {
           <Titulo>Servicios</Titulo>
           <Lista>
             {servicios.map((ser, index) => {
-              return <Item key={index}>{ser.nombre}</Item>;
+              return (
+                <Item className="noStyle" key={index}>
+                  {ser.nombre}
+                </Item>
+              );
             })}
           </Lista>
         </CajaSeccion>
@@ -90,6 +104,31 @@ const Container = styled.footer`
   display: flex;
   justify-content: center;
   gap: 15px;
+`;
+const Enlaces = styled(Link)`
+  font-size: 1.1rem;
+  font-size: 15px;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  &.registrarse {
+    border: 2px solid ${Theme.primary.mostazaDorado};
+    border-radius: 4px;
+    padding: 8px;
+  }
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &:target {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &.log {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Columna = styled.section`
@@ -150,6 +189,13 @@ const Item = styled.li`
   &:hover {
     text-decoration: underline;
     cursor: pointer;
+  }
+  &.noStyle {
+    list-style: circle;
+    &:hover {
+      text-decoration: none;
+      cursor: auto;
+    }
   }
 `;
 

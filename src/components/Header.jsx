@@ -35,14 +35,14 @@ export default function Header({ absolute }) {
             <Elementos>
               <Enlaces to={"/contacto"}>Contacto</Enlaces>
             </Elementos>
-            <Elementos>
+            {/* <Elementos>
               <Enlaces to={"/login"}>Iniciar Sesion</Enlaces>
-            </Elementos>
-            <Elementos className="registrarse">
+            </Elementos> */}
+            {/* <Elementos className="registrarse">
               <Enlaces to={"/registro"} className="registrarse">
                 Registrarse
               </Enlaces>
-            </Elementos>
+            </Elementos> */}
           </Lista>
         </NavList>
       </CajaInterna>
@@ -91,6 +91,7 @@ const NombreNegocio = styled.h1`
 const NavList = styled.nav`
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
   color: ${Theme.primary.mostazaDorado};
 `;

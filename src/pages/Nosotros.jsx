@@ -14,7 +14,7 @@ export default function Nosotros() {
       <Container>
         <TituloPage titulo={"Sobre nosotros"} />
 
-        <CajaParallax>
+        {/* <CajaParallax>
           <CapaFrosting>
             <CajaContenido>
               <WrapTextoImg>
@@ -53,7 +53,7 @@ export default function Nosotros() {
               </WrapTextoImg>
             </CajaContenido>
           </CapaFrosting>
-        </CajaParallax>
+        </CajaParallax> */}
         <CajaParallax className=" ">
           <CapaFrosting className=" ">
             <CajaContenido>
@@ -124,17 +124,15 @@ export default function Nosotros() {
           </InternaCultura>
           <InternaCultura>
             <TituloCultura>Valores</TituloCultura>
-            <ParrafoCultura>
-              <Lista>
-                <Elemento>Calidad</Elemento>
-                <Elemento>Innovación</Elemento>
-                <Elemento>Compromiso</Elemento>
-                <Elemento>Sostenibilidad</Elemento>
-                <Elemento>Trabajo en equipo</Elemento>
-                <Elemento>Seguridad</Elemento>
-                <Elemento>Honestidad</Elemento>
-              </Lista>
-            </ParrafoCultura>
+            <Lista>
+              <Elemento>Calidad</Elemento>
+              <Elemento>Innovación</Elemento>
+              <Elemento>Compromiso</Elemento>
+              <Elemento>Sostenibilidad</Elemento>
+              <Elemento>Trabajo en equipo</Elemento>
+              <Elemento>Seguridad</Elemento>
+              <Elemento>Honestidad</Elemento>
+            </Lista>
           </InternaCultura>
         </CajaCultura>
       </Container>
@@ -312,5 +310,10 @@ const ParrafoCultura = styled.p`
 const Lista = styled.ul`
   text-align: start;
   padding-left: 35%;
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: justify;
+  color: ${Theme.neutral.neutral600};
+  line-height: 1.6rem;
 `;
 const Elemento = styled.li``;

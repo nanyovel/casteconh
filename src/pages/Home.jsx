@@ -1,7 +1,7 @@
 import Theme from "../config/Theme";
 import styled from "styled-components";
 
-import React from "react";
+import React, { useRef } from "react";
 import Header from "../components/Header";
 import Hero from "./Modulos1Home/Hero";
 import Marcas from "./Modulos1Home/Marcas";
@@ -10,8 +10,23 @@ import Opiniones from "./Modulos1Home/Opiniones";
 import Stats from "./Modulos1Home/Stats";
 import Footer from "../components/Footer";
 import BarraMensaje from "../components/BarraMensaje";
+import PorqueElegirnos from "./Modulos1Home/PorqueElegirnos";
+import ProyDestacados from "./Modulos1Home/ProyDestacados";
+import { useLocation } from "react-router";
 
 export default function Home() {
+  const porqueElegirnosRef = useRef(null);
+
+  const scrollToContacto = () => {
+    porqueElegirnosRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const location = useLocation();
+  console.log(location);
+  if (location.hash == "#porqueElefi") {
+    scrollToContacto();
+  }
+
   return (
     <Container>
       <Header absolute={true} />
@@ -57,21 +72,44 @@ export default function Home() {
           <CarrucelMarcas invertido={true} />
         </WrapModulo>
       </Seccion>
+      <Seccion className="noPadding" ref={porqueElegirnosRef}>
+        <CajaTitulo className="padding">
+          <WrapCuadro>
+            <CuadroAzul />
+          </WrapCuadro>
+          <TituloSeccion>¿Por qué elegirnos?</TituloSeccion>
+        </CajaTitulo>
+        <WrapModulo>
+          <PorqueElegirnos />
+        </WrapModulo>
+      </Seccion>
+      <Seccion className="noPadding">
+        <CajaTitulo className="padding">
+          <WrapCuadro>
+            <CuadroAzul />
+          </WrapCuadro>
+          <TituloSeccion>¿Que dicen nuestros clientes?</TituloSeccion>
+        </CajaTitulo>
+        <WrapModulo>
+          <Opiniones />
+        </WrapModulo>
+      </Seccion>
+
+      <Seccion className="parallax">
+        <WrapModulo className="parallax">
+          <Stats />
+        </WrapModulo>
+      </Seccion>
 
       <Seccion className="noPadding">
         <CajaTitulo className="padding">
           <WrapCuadro>
             <CuadroAzul />
           </WrapCuadro>
-          <TituloSeccion>Que dicen nuestros clientes?</TituloSeccion>
+          <TituloSeccion>Proyectos destacados</TituloSeccion>
         </CajaTitulo>
         <WrapModulo>
-          <Opiniones />
-        </WrapModulo>
-      </Seccion>
-      <Seccion className="parallax">
-        <WrapModulo className="parallax">
-          <Stats />
+          <ProyDestacados />
         </WrapModulo>
       </Seccion>
       <BarraMensaje
