@@ -120,6 +120,10 @@ const Container = styled.div`
   justify-content: center;
   gap: 5px;
   position: relative;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Img = styled.img`
@@ -132,6 +136,15 @@ const Img = styled.img`
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
+  }
+  @media screen and (max-width: 800px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 80%;
   }
 `;
 
@@ -165,6 +178,12 @@ const CajaGlasliner = styled(CajaSlider)`
     opacity: 1;
     transform: translate(0%);
     right: 100px;
+    @media screen and (max-width: 500px) {
+      right: 0;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
   }
 `;
 const CajaPolysto = styled(CajaSlider)`
@@ -177,6 +196,12 @@ const CajaPolysto = styled(CajaSlider)`
     opacity: 1;
     transform: translate(0%);
     left: 100px;
+    @media screen and (max-width: 500px) {
+      left: 0;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
   }
 `;
 const CajaTitulo = styled.div`

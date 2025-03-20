@@ -44,20 +44,6 @@ const Container = styled.div`
   width: 100%;
   min-height: 200px;
 `;
-const BarraTitulo = styled.div`
-  background-color: ${Theme.primary.mostazaDorado};
-  height: 200px;
-  width: 100%;
-  align-content: center;
-  margin: 100px 0;
-`;
-const Titulo = styled.h2`
-  color: ${Theme.primary.azulProfundo};
-  width: 100%;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: lighter;
-`;
 
 const CajaParallax = styled.div`
   width: 100%;
@@ -71,6 +57,9 @@ const CajaParallax = styled.div`
   &.dorado {
     background-image: url("./../../public/img/receid2.jpg");
   }
+  @media screen and (max-width: 970px) {
+    height: auto;
+  }
 `;
 const CapaFrosting = styled.div`
   background-color: rgba(7, 14, 24, 0.868);
@@ -82,6 +71,12 @@ const CapaFrosting = styled.div`
   align-content: center;
   &.dorado {
     background-color: rgba(32, 23, 3, 0.762);
+  }
+  @media screen and (max-width: 970px) {
+    padding: 20px 60px;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 20px 30px;
   }
 `;
 
@@ -96,6 +91,10 @@ const CajaContenido = styled.div`
     padding-left: 40px;
     padding-right: 40px;
   }
+  @media screen and (max-width: 650px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 const WrapTextoImg = styled.div`
@@ -104,13 +103,6 @@ const WrapTextoImg = styled.div`
   gap: 30px;
   justify-content: center;
 
-  &.reverse {
-    flex-direction: row-reverse;
-    margin-bottom: 180px;
-    @media screen and (max-width: 970px) {
-      flex-direction: column-reverse;
-    }
-  }
   @media screen and (max-width: 970px) {
     flex-direction: column-reverse;
   }
@@ -122,45 +114,12 @@ const CajaInterna = styled.div`
     display: flex;
     align-items: center;
   }
-  &.cajaImg {
-    position: relative;
-    overflow: hidden;
-    box-shadow: ${Theme.config.sombra};
-
-    &:hover .hover {
-      transform: translateX(0%);
-    }
-    @media screen and (max-width: 970px) {
-      width: 80%;
-    }
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
+  @media screen and (max-width: 970px) {
+    width: 90%;
   }
-`;
-const Img = styled.img`
-  width: 100%;
-  -moz-box-shadow: 3px 7px 11px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 3px 7px 11px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 7px 11px 0px rgba(0, 0, 0, 0.75);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  &.svg {
-    width: 80%;
+  @media screen and (max-width: 650px) {
+    width: 100%;
   }
-  &.vertical {
-    /* width: 100%; */
-  }
-`;
-const Parrafo = styled.p`
-  line-height: 1.6rem;
-  font-size: 1.2rem;
-  color: white;
-`;
-const CajaForm = styled.div`
-  height: 100%;
-  width: 100%;
 `;
 const MapaGoogle = styled.iframe`
   width: 100%;

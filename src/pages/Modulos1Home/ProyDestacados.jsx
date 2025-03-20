@@ -41,7 +41,12 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding: 0 10px;
   width: 100%;
+  flex-wrap: wrap;
+  @media screen and (max-width: 800px) {
+    gap: 5px;
+  }
 `;
 const Card = styled.div`
   width: calc(25% - 10px);
@@ -55,6 +60,18 @@ const Card = styled.div`
     cursor: pointer;
     transform: scale(1.1);
     box-shadow: 3px 7px 11px 0px #d5a241;
+  }
+  @media screen and (max-width: 800px) {
+    width: calc(33% - 5px);
+  }
+  @media screen and (max-width: 700px) {
+    width: 55%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 90%;
   }
 `;
 const CajaImg = styled.div`

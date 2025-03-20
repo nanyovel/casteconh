@@ -57,8 +57,12 @@ const CajaImg = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  @media screen and (max-width: 560px) {
+    height: 100vh;
+  }
 `;
 const CajaFrosting = styled.div`
+  overflow: hidden;
   width: 100%;
   height: 50vh;
   background-color: #d5a14196;
@@ -69,6 +73,17 @@ const CajaFrosting = styled.div`
   gap: 40px;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 740px) {
+    gap: 15px;
+  }
+  @media screen and (max-width: 670px) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 560px) {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 0;
+  }
 `;
 const Card = styled.div`
   width: 250px;

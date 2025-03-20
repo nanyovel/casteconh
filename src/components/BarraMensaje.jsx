@@ -22,4 +22,13 @@ const Texto = styled.h2`
   color: ${Theme.primary.mostazaDorado};
   color: white;
   font-size: 2.5rem;
+  @media screen and (max-width: 520px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 420px) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: 365px) {
+    font-size: 1.7rem;
+  }
 `;

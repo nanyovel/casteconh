@@ -76,6 +76,14 @@ const Card = styled.div`
   box-shadow: ${Theme.config.sombra};
   border-radius: 4px;
   overflow: hidden;
+  @media screen and (max-width: 900px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 780px) {
+    width: 90%;
+    min-height: 250px;
+    height: auto;
+  }
 `;
 const Avatar = styled.img`
   width: 100%;
@@ -98,9 +106,15 @@ const CajaTexto = styled.div`
 `;
 const Nombre = styled.h2`
   color: ${Theme.primary.mostazaDorado};
+  @media screen and (max-width: 380px) {
+    font-size: 1.2rem;
+  }
 `;
 const Cargo = styled.h3`
   color: ${Theme.neutral.neutral650};
   margin-bottom: 10px;
+  @media screen and (max-width: 380px) {
+    font-size: 1rem;
+  }
 `;
 const Review = styled.p``;

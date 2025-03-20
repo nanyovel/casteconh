@@ -39,9 +39,23 @@ const Card = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width: 850px) {
+    width: 200px;
+    height: 200px;
+  }
+  @media screen and (max-width: 670px) {
+    width: 170px;
+    height: 170px;
+  }
+  @media screen and (max-width: 560px) {
+    width: 80%;
+  }
 `;
 const Img = styled.img`
   width: 40%;
+  @media screen and (max-width: 560px) {
+    width: 90px;
+  }
 `;
 const QtyCreciente = styled.h2`
   font-size: 2.4rem;
@@ -51,4 +65,7 @@ const QtyCreciente = styled.h2`
 const Titulo = styled.h2`
   color: ${Theme.primary.azulProfundo};
   font-size: 1.4rem;
+  @media screen and (max-width: 850px) {
+    font-size: 1rem;
+  }
 `;

@@ -64,7 +64,7 @@ export default function Nosotros() {
                 <CajaInterna className="texto">
                   <TituloLess>Historia</TituloLess>
                   <br />
-                  <Parrafo>
+                  <Parrafo className="historia">
                     CASTECONH SRL se fundó el 25 de Marzo de 2020, inicialmente
                     liderada por el Ing. Felipe Antonio Castro Ubiera, quien
                     prestaba servicios como persona física. La demanda creciente
@@ -147,20 +147,7 @@ const Container = styled.div`
   width: 100%;
   min-height: 200px;
 `;
-const BarraTitulo = styled.div`
-  background-color: ${Theme.primary.mostazaDorado};
-  height: 200px;
-  width: 100%;
-  align-content: center;
-  margin: 100px 0;
-`;
-const Titulo = styled.h2`
-  color: ${Theme.primary.azulProfundo};
-  width: 100%;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: lighter;
-`;
+
 const CajaParallax = styled.div`
   width: 100%;
   height: 600px;
@@ -173,6 +160,9 @@ const CajaParallax = styled.div`
   &.dorado {
     background-image: url("/img/receid2.jpg");
   }
+  @media screen and (max-width: 700px) {
+    height: auto;
+  }
 `;
 const CapaFrosting = styled.div`
   background-color: rgba(7, 14, 24, 0.868);
@@ -181,9 +171,22 @@ const CapaFrosting = styled.div`
   backdrop-filter: blur(2px); /* Aplica el desenfoque */
   -webkit-backdrop-filter: blur(1px);
   padding: 20px 120px;
+
   align-content: center;
   &.dorado {
     background-color: rgba(32, 23, 3, 0.762);
+  }
+  @media screen and (max-width: 1350px) {
+    padding: 20px 80px;
+  }
+  @media screen and (max-width: 1250px) {
+    padding: 20px 40px;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 20px;
+  }
+  @media screen and (max-width: 450px) {
+    padding: 5px;
   }
 `;
 
@@ -192,41 +195,28 @@ const CapaFrosting = styled.div`
 const CajaContenido = styled.div`
   width: 100%;
   min-height: 200px;
-  @media screen and (max-width: 1100px) {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-  @media screen and (max-width: 850px) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  height: 100%;
 `;
 
 const WrapTextoImg = styled.div`
   display: flex;
   margin-bottom: 30px;
   gap: 30px;
+  height: 100%;
   &.reverse {
     flex-direction: row-reverse;
     margin-bottom: 180px;
-    @media screen and (max-width: 970px) {
+    @media screen and (max-width: 700px) {
       flex-direction: column-reverse;
+      align-items: center;
     }
-  }
-  @media screen and (max-width: 970px) {
-    flex-direction: column-reverse;
   }
 `;
 const CajaInterna = styled.div`
   width: 48%;
+  height: 100%;
   &.texto {
     align-content: center;
-    @media screen and (max-width: 970px) {
-      width: 80%;
-    }
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
   }
   &.cajaImg {
     position: relative;
@@ -236,12 +226,9 @@ const CajaInterna = styled.div`
     &:hover .hover {
       transform: translateX(0%);
     }
-    @media screen and (max-width: 970px) {
-      width: 80%;
-    }
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
+  }
+  @media screen and (max-width: 700px) {
+    width: 90%;
   }
 `;
 const Img = styled.img`
@@ -258,12 +245,33 @@ const Img = styled.img`
   &.vertical {
     /* width: 100%; */
   }
+  @media screen and (max-width: 1250px) {
+    width: auto;
+    height: 100%;
+  }
+  @media screen and (max-width: 700px) {
+    height: auto;
+    width: 100%;
+  }
 `;
 const Parrafo = styled.p`
   line-height: 1.6rem;
   font-size: 1.2rem;
   color: white;
   text-align: justify;
+  &.historia {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    border: 1px solid gray;
+    padding: 4px;
+    @media screen and (max-width: 700px) {
+      width: 90%;
+      border: none;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
 `;
 
 const TituloLess = styled.h3`
@@ -283,6 +291,19 @@ const CajaCultura = styled.div`
   display: flex;
   padding: 0 200px;
   gap: 10px;
+  @media screen and (max-width: 1200px) {
+    padding: 0 100px;
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (max-width: 450px) {
+    padding: 0 20px;
+  }
 `;
 const InternaCultura = styled.div`
   padding: 10px;
@@ -290,6 +311,12 @@ const InternaCultura = styled.div`
   display: flex;
   justify-content: start;
   flex-direction: column;
+  @media screen and (max-width: 750px) {
+    width: 85%;
+  }
+  @media screen and (max-width: 450px) {
+    width: 100%;
+  }
 `;
 const TituloCultura = styled.h3`
   width: 100%;

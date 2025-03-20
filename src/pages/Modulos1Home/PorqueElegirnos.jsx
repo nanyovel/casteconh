@@ -29,6 +29,12 @@ const Container = styled.div`
 `;
 const Wrap = styled.div`
   width: 60%;
+  @media screen and (max-width: 800px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
 `;
 const Texto = styled.div`
   font-size: 1.6rem;

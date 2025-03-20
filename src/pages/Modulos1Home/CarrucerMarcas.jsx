@@ -27,7 +27,7 @@ export default function CarrucelMarcas({ invertido }) {
   );
 }
 const Container = styled.div`
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
   display: flex;
   align-items: center;
@@ -47,10 +47,18 @@ const scroll = (invertido) => keyframes`
 const LogoTrack = styled.div`
   display: flex;
   right: ${(props) => (props.$invertido ? "0" : "auto")};
-  position: absolute;
   width: calc(200%);
   flex-direction: ${(props) => (props.$invertido ? "row-reverse" : "row")};
   animation: ${(props) => scroll(props.$invertido)} 25s linear infinite;
+  @media screen and (max-width: 750px) {
+    animation: ${(props) => scroll(props.$invertido)} 10s linear infinite;
+  }
+  @media screen and (max-width: 650px) {
+    animation: ${(props) => scroll(props.$invertido)} 8s linear infinite;
+  }
+  @media screen and (max-width: 500px) {
+    animation: ${(props) => scroll(props.$invertido)} 5s linear infinite;
+  }
 `;
 // Cada logo
 const Logo = styled.div`
@@ -64,6 +72,9 @@ const Logo = styled.div`
   justify-content: center;
   box-shadow: ${Theme.config.sombra};
   padding: 8px;
+  @media screen and (max-width: 500px) {
+    width: 180px;
+  }
 
   img {
     max-width: 100%;
@@ -73,9 +84,15 @@ const Logo = styled.div`
 `;
 const Img = styled.img`
   width: 70px;
+  @media screen and (max-width: 500px) {
+    width: 45px;
+  }
 `;
 const Titulo = styled.h2`
   font-size: 1rem;
   text-decoration: center;
   color: ${Theme.primary.mostazaDorado};
+  @media screen and (max-width: 500px) {
+    font-size: 0.9rem;
+  }
 `;

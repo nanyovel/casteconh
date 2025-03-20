@@ -67,7 +67,7 @@ export default function Home() {
           </WrapCuadro>
           <TituloSeccion>Nuestros servicios:</TituloSeccion>
         </CajaTitulo>
-        <WrapModulo className="bgDorado">
+        <WrapModulo className="bgDorado servicios">
           <CarrucelMarcas />
           <CarrucelMarcas invertido={true} />
         </WrapModulo>
@@ -83,6 +83,7 @@ export default function Home() {
           <PorqueElegirnos />
         </WrapModulo>
       </Seccion>
+
       <Seccion className="noPadding">
         <CajaTitulo className="padding">
           <WrapCuadro>
@@ -112,6 +113,7 @@ export default function Home() {
           <ProyDestacados />
         </WrapModulo>
       </Seccion>
+
       <BarraMensaje
         texto="¡Construimos tus sueños!
 "
@@ -128,7 +130,6 @@ const Container = styled.div`
 `;
 const Seccion = styled.div`
   min-height: 300px;
-  /* border: 1px solid red; */
   padding: 0 100px;
   display: flex;
   justify-content: center;
@@ -144,21 +145,34 @@ const Seccion = styled.div`
   &.parallax {
     padding: 0;
   }
+  @media screen and (max-width: 800px) {
+    padding: 0px 50px;
+  }
+  @media screen and (max-width: 660px) {
+    padding: 0px 25px;
+    min-height: 150px;
+  }
 `;
 const CajaTitulo = styled.div`
   width: 100%;
-  height: 80px;
+  /* height: 80px; */
   display: flex;
-  /* background-color: blue; */
+  align-items: center;
   &.padding {
     padding: 0 100px;
+    @media screen and (max-width: 800px) {
+      padding: 0px 50px;
+    }
+    @media screen and (max-width: 660px) {
+      padding: 0px 25px;
+    }
   }
 `;
 const WrapCuadro = styled.div`
   position: relative;
   width: 50px;
   height: 50px;
-  margin-right: 4px;
+  margin-right: 8px;
 `;
 const CuadroAzul = styled.div`
   width: 50px;
@@ -166,7 +180,7 @@ const CuadroAzul = styled.div`
   height: 3rem;
   background-color: ${Theme.primary.azulProfundo};
   position: absolute;
-  bottom: -7px;
+  /* bottom: -7px; */
 `;
 const WrapTitulo = styled.div`
   display: flex;
@@ -178,10 +192,23 @@ const TituloSeccion = styled.h2`
   width: 100%;
   text-align: start;
   font-size: 3.5rem;
-  /* text-decoration: underline; */
   color: ${Theme.primary.mostazaDorado};
   font-weight: 400;
-  /* background-color: green; */
+  align-content: center;
+  /* height: 100%; */
+  @media screen and (max-width: 1000px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-width: 620px) {
+    font-size: 2.5rem;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 380px) {
+    font-size: 1.5rem;
+  }
 `;
 const Sub_Parrafo = styled.p`
   margin-bottom: 20px;
@@ -195,6 +222,16 @@ const Parrafo1 = styled.p`
   font-size: 3rem;
   text-align: center;
   color: ${Theme.primary.mostazaDorado};
+  @media screen and (max-width: 750px) {
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  @media screen and (max-width: 660px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 const WrapModulo = styled.div`
   width: 100%;
@@ -206,5 +243,8 @@ const WrapModulo = styled.div`
   }
   &.marcas {
     background-image: repeating-linear-gradient(-45deg, #d5a241, #66522e 350px);
+  }
+  &.servicios {
+    overflow: hidden;
   }
 `;

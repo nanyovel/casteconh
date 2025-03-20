@@ -24,7 +24,6 @@ export default function Footer() {
           </SubTituloSara>
         </CajaSeccion>
         <CajaSeccion className="redes">
-          <Titulo>Redes sociales</Titulo>
           <CajaRRSS>
             <Icono icon={faYoutube} />
             <Icono icon={faInstagram} />
@@ -32,10 +31,7 @@ export default function Footer() {
             <Icono icon={faFacebook} />
           </CajaRRSS>
         </CajaSeccion>
-      </Columna>
-
-      <Columna>
-        <CajaSeccion>
+        <CajaSeccion className="border">
           <Titulo>Enlaces de interes</Titulo>
           <Lista>
             <Item>
@@ -57,13 +53,7 @@ export default function Footer() {
         </CajaSeccion>
         <CajaSeccion>
           {/* <Titulo>Enlaces de interes</Titulo> */}
-          <Lista>
-            {/* <Item><Enlaces to={"/contacto"}>Contacto</Enlaces></Item> */}
-            {/* <Item>Donde encontrarnos</Item> */}
-            {/* <Item>Registrate</Item> */}
-            {/* <Item>Preguntas frecuentes</Item> */}
-            {/* <Item>Quejas y reclamaciones</Item> */}
-          </Lista>
+          <Lista></Lista>
         </CajaSeccion>
       </Columna>
 
@@ -96,7 +86,7 @@ export default function Footer() {
     </Container>
   );
 }
-
+console.log(window.screen.width);
 const Container = styled.footer`
   width: 100%;
   height: 500px;
@@ -104,6 +94,13 @@ const Container = styled.footer`
   display: flex;
   justify-content: center;
   gap: 15px;
+  @media screen and (max-width: 1050px) {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    /* background-color: transparent; */
+    border: 2px solid black;
+  }
 `;
 const Enlaces = styled(Link)`
   font-size: 1.1rem;
@@ -132,7 +129,7 @@ const Enlaces = styled(Link)`
 `;
 
 const Columna = styled.section`
-  width: 25%;
+  width: 33%;
   /* border-left: 2px solid ${Theme.primary.rojoBrillante}; */
   border-right: 2px solid ${Theme.primary.rojoBrillante};
   display: flex;
@@ -141,10 +138,22 @@ const Columna = styled.section`
   align-items: center;
   &.sinBordes {
     border: none;
+    @media screen and (max-width: 1050px) {
+      border: 2px solid black;
+    }
   }
 
   &.logo {
     background-color: ${Theme.primary.azulProfundo};
+  }
+  @media screen and (max-width: 1050px) {
+    width: 90%;
+    border: 2px solid black;
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    border: none;
+    padding: 0 15px;
   }
 `;
 const TituloSara = styled.h1`
@@ -158,10 +167,10 @@ const SubTituloSara = styled.h2`
 
   width: 100%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 `;
 const Titulo = styled.h3`
-  color: ${Theme.primary.azulProfundo};
+  color: white;
   width: 100%;
   text-align: start;
   /* font-weight: lighter; */
@@ -173,7 +182,7 @@ const Titulo = styled.h3`
   /* font-size: 1rem; */
 `;
 const Img = styled.img`
-  width: 50%;
+  width: 30%;
   border-radius: 50%;
 `;
 const Lista = styled.ul`
@@ -218,6 +227,9 @@ const CajaRRSS = styled.div`
   display: flex;
   justify-content: center;
   gap: 30px;
+  @media screen and (max-width: 800px) {
+    gap: 10px;
+  }
 `;
 const Icono = styled(FontAwesomeIcon)`
   font-size: 2rem;
@@ -246,4 +258,188 @@ const CajaSeccion = styled.div`
     width: 100%;
     padding: 6px;
   }
+  &.border {
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 8px;
+    width: 90%;
+  }
 `;
+
+//
+//
+//
+//
+// //
+// import React from "react";
+// import styled from "styled-components";
+// import Theme from "../config/Theme";
+// import ImgLogo from "./../../public/img/logo.png";
+// import { Link, NavLink } from "react-router";
+// import { faUser } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// export default function Header({ absolute }) {
+//   return (
+//     <Container className={absolute ? "absolute" : ""}>
+//       <CajaInterna className="izq">
+//         <Enlaces to={"/"} className="logo">
+//           <CajaLogo>
+//             <Img src={ImgLogo} />
+//           </CajaLogo>
+//           <CajaNombreNegocio>
+//             <NombreNegocio>CASTECONH</NombreNegocio>
+//           </CajaNombreNegocio>
+//         </Enlaces>
+//       </CajaInterna>
+//       <CajaInterna className="der">
+//         <NavList>
+//           <Lista>
+//             <Elementos>
+//               <Enlaces to={"/"}>Inicio</Enlaces>
+//             </Elementos>
+//             <Elementos>
+//               <Enlaces to={"/servicios"}>Servicios</Enlaces>
+//             </Elementos>
+//             <Elementos>
+//               <Enlaces to={"/productos"}>Productos</Enlaces>
+//             </Elementos>
+//             <Elementos>
+//               <Enlaces to={"/nosotros"}>Nosotros</Enlaces>
+//             </Elementos>
+//             <Elementos>
+//               <Enlaces to={"/contacto"}>Contacto</Enlaces>
+//             </Elementos>
+//             {/* <Elementos>
+//               <Enlaces to={"/login"}>Iniciar Sesion</Enlaces>
+//             </Elementos> */}
+//             {/* <Elementos className="registrarse">
+//               <Enlaces to={"/registro"} className="registrarse">
+//                 Registrarse
+//               </Enlaces>
+//             </Elementos> */}
+//           </Lista>
+//         </NavList>
+//       </CajaInterna>
+//     </Container>
+//   );
+// }
+// const Icono = styled(FontAwesomeIcon)`
+//   /* color: white; */
+// `;
+// const Container = styled.div`
+//   width: 100%;
+//   height: 80px;
+//   background-color: ${Theme.primary.azulProfundo};
+//   padding: 0 200px;
+//   display: flex;
+//   opacity: 0.9;
+//   z-index: 100;
+//   &.absolute {
+//     position: absolute;
+//     top: 0;
+//   }
+//   border: 1px solid red;
+//   @media screen and (max-width: 1100px) {
+//     padding: 0 100px;
+//   }
+//   @media screen and (max-width: 900px) {
+//     padding: 0 50px;
+//   }
+//   @media screen and (max-width: 800px) {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+// `;
+// const CajaInterna = styled.div`
+//   width: 50%;
+//   height: 100%;
+//   &.izq {
+//     display: flex;
+//     justify-content: center;
+//   }
+//   @media screen and (max-width: 800px) {
+//     height: 50%;
+//     width: auto;
+//   }
+// `;
+// const CajaLogo = styled.div`
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   @media screen and (max-width: 800px) {
+//     /* height: 40%; */
+//   }
+//   align-items: center;
+// `;
+// const Img = styled.img`
+//   border-radius: 50%;
+//   height: 100%;
+// `;
+// const CajaNombreNegocio = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// `;
+// const NombreNegocio = styled.h1`
+//   color: ${Theme.primary.mostazaDorado};
+//   /* font-weight: 400; */
+// `;
+// const NavList = styled.nav`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100%;
+//   color: ${Theme.primary.mostazaDorado};
+// `;
+// const Lista = styled.ul`
+//   list-style: none;
+//   display: flex;
+//   gap: 20px;
+//   @media screen and (max-width: 410px) {
+//     gap: 10px;
+//   }
+//   @media screen and (max-width: 410px) {
+//     gap: 8px;
+//   }
+// `;
+// const Elementos = styled.li`
+//   /* border: 1px solid red; */
+//   align-content: center;
+// `;
+
+// const Enlaces = styled(Link)`
+//   font-size: 1.1rem;
+//   font-size: 15px;
+//   color: inherit;
+//   text-decoration: none;
+//   @media screen and (max-width: 410px) {
+//     text-decoration: underline;
+//   }
+//   @media screen and (max-width: 340px) {
+//     font-size: 12px;
+//   }
+//   white-space: nowrap;
+//   &.registrarse {
+//     border: 2px solid ${Theme.primary.mostazaDorado};
+//     border-radius: 4px;
+//     padding: 8px;
+//   }
+//   &:hover {
+//     text-decoration: underline;
+//     cursor: pointer;
+//   }
+//   &:target {
+//     text-decoration: underline;
+//     cursor: pointer;
+//   }
+
+//   &.log {
+//     display: flex;
+//     flex-direction: column;
+//   }
+//   &.logo {
+//     display: flex;
+//     text-decoration: none;
+//   }
+// `;

@@ -85,25 +85,22 @@ export default function Hero() {
           </React.Fragment>
         ))}
       </Container>
-      {/* <CajaCta>
-        <CajaBtn>
-          <BtnSimple>Mas info.</BtnSimple>
-        </CajaBtn>
-      </CajaCta> */}
     </ContainerPadre>
   );
 }
 
 const ContainerPadre = styled.div`
-  /* padding-top: 100px; */
   height: 100vh;
-  /* position: absolute; */
-  /* top: 0; */
-  /* background-color: black; */
   background-color: ${Theme.primary.azulSuave};
-  width: 100vw;
+  width: 100%;
   margin-bottom: 150px;
   position: relative;
+  @media screen and (max-width: 800px) {
+    margin-bottom: 80px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const Container = styled.div`
@@ -135,50 +132,65 @@ const Frosting = styled.div`
   position: absolute;
   right: 50%;
   top: 25%;
-  /* left: -400px; */
-  /* background-color: #3498db; */
-  /* clip-path: polygon(0% 0%, 30% 0%, 100% 100%, 0% 100%); */
+
   transition: all 1s ease;
   &.colocar {
     opacity: 0.9;
     right: -50px;
+    right: 0;
   }
   box-shadow: ${Theme.config.sombra};
+  @media screen and (max-width: 960px) {
+    width: 70%;
+  }
+  @media screen and (max-width: 490px) {
+    width: 80%;
+  }
 `;
 
 const CajaTexto = styled.div`
   width: 500px;
   min-height: 100px;
-  /* background-color: blue; */
   position: absolute;
   top: ${(props) => (props.$isActive ? "100px" : "0")};
   left: 20px;
-  /* bottom: 100%; */
-  /* opacity: ${(props) => (props.$isActive ? 1 : 0)}; */
   transition: all 1.5s ease;
-  /* transition: top 1.4s ease; */
   background-color: #000000b0;
   background-color: ${Theme.primary.azulProfundo};
-  /* background-color: red; */
   border-radius: 5px;
   box-shadow: ${Theme.config.sombra};
   z-index: 100;
+  @media screen and (max-width: 960px) {
+    /* width: calc(100% - 15px); */
+    overflow: hidden;
+    left: 7px;
+    margin: auto;
+  }
+  @media screen and (max-width: 740px) {
+    width: calc(100% - 15px);
+  }
 `;
 const WrapLogoNombre = styled.div`
   width: 100%;
   display: flex;
-  /* border: 1px solid red; */
   align-items: center;
   justify-content: center;
-  /* gap: 15px; */
   flex-direction: column;
 `;
 
 const Titulo1 = styled.h1`
   font-size: 3rem;
-  /* font-weight: 200; */
   color: white;
   white-space: nowrap;
+  @media screen and (max-width: 740px) {
+    font-size: 2.4rem;
+  }
+  @media screen and (max-width: 585px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 490px) {
+    font-size: 1.6rem;
+  }
 `;
 const WrapSubtitulo = styled.div`
   width: 100%;
@@ -190,21 +202,13 @@ const SubTitulo = styled.h2`
   color: white;
   font-weight: 400;
   padding: 10px;
-`;
-const CajaBtn = styled.div`
-  width: 100%;
-`;
-const BtnSimple = styled(BotonGeneral)`
-  z-index: 10000;
-  font-weight: bold;
-  background-color: aliceblue;
-`;
-
-const CajaCta = styled.div`
-  width: 200px;
-  height: 100px;
-  background-color: red;
-  position: absolute;
-  bottom: 150px;
-  left: 100px;
+  @media screen and (max-width: 960px) {
+    font-size: 1.2rem;
+    max-width: calc(100%-15px);
+    left: 7px;
+    margin: auto;
+  }
+  @media screen and (max-width: 490px) {
+    font-size: 1rem;
+  }
 `;

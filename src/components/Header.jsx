@@ -10,12 +10,14 @@ export default function Header({ absolute }) {
   return (
     <Container className={absolute ? "absolute" : ""}>
       <CajaInterna className="izq">
-        <CajaLogo>
-          <Img src={ImgLogo} />
-        </CajaLogo>
-        <CajaNombreNegocio>
-          <NombreNegocio>CASTECONH</NombreNegocio>
-        </CajaNombreNegocio>
+        <Enlaces to={"/"} className="logo">
+          <CajaLogo>
+            <Img src={ImgLogo} />
+          </CajaLogo>
+          <CajaNombreNegocio>
+            <NombreNegocio>CASTECONH</NombreNegocio>
+          </CajaNombreNegocio>
+        </Enlaces>
       </CajaInterna>
       <CajaInterna className="der">
         <NavList>
@@ -64,16 +66,40 @@ const Container = styled.div`
     position: absolute;
     top: 0;
   }
+  @media screen and (max-width: 1100px) {
+    padding: 0 100px;
+  }
+  @media screen and (max-width: 900px) {
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const CajaInterna = styled.div`
   width: 50%;
   height: 100%;
   &.izq {
     display: flex;
+    justify-content: center;
+  }
+  @media screen and (max-width: 800px) {
+    height: 50%;
+    width: auto;
   }
 `;
 const CajaLogo = styled.div`
   height: 100%;
+
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  @media screen and (max-width: 800px) {
+    /* height: 40%; */
+    width: 50px;
+  }
+  align-items: center;
 `;
 const Img = styled.img`
   border-radius: 50%;
@@ -99,6 +125,12 @@ const Lista = styled.ul`
   list-style: none;
   display: flex;
   gap: 20px;
+  @media screen and (max-width: 390px) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 340px) {
+    gap: 8px;
+  }
 `;
 const Elementos = styled.li`
   /* border: 1px solid red; */
@@ -128,5 +160,12 @@ const Enlaces = styled(Link)`
   &.log {
     display: flex;
     flex-direction: column;
+  }
+  &.logo {
+    display: flex;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 340px) {
+    font-size: 14px;
   }
 `;
