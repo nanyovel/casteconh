@@ -37,9 +37,9 @@ export default function Header({ absolute }) {
             <Elementos>
               <Enlaces to={"/contacto"}>Contacto</Enlaces>
             </Elementos>
-            {/* <Elementos>
+            <Elementos>
               <Enlaces to={"/login"}>Iniciar Sesion</Enlaces>
-            </Elementos> */}
+            </Elementos>
             {/* <Elementos className="registrarse">
               <Enlaces to={"/registro"} className="registrarse">
                 Registrarse

@@ -27,8 +27,8 @@ export default function OurClients() {
     Img1hardRock,
     Img2PuntaCanaGroup,
     Img3Bravo,
-    Img4Induveca,
     Img5Unidos,
+    Img4Induveca,
     Img6UCR,
   ];
   return (
@@ -58,7 +58,9 @@ const Container = styled.div`
 
 const Img = styled.img`
   width: 12.5%;
-  object-fit: cover;
+  /* max-height: 100%; */
+  height: 150px;
+  object-fit: contain;
   @media screen and (max-width: 500px) {
     width: 30%;
   }

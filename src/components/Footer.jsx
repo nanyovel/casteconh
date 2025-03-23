@@ -16,6 +16,20 @@ import { Link } from "react-router";
 export default function Footer() {
   return (
     <Container>
+      <Columna>
+        <CajaSeccion>
+          <Titulo>Servicios</Titulo>
+          <Lista>
+            {servicios.map((ser, index) => {
+              return (
+                <Item className="noStyle" key={index}>
+                  {ser.nombre}
+                </Item>
+              );
+            })}
+          </Lista>
+        </CajaSeccion>
+      </Columna>
       <Columna className="logo">
         <Enlaces to={"/"} className="logo">
           <Img src={ImgLogo} />
@@ -70,22 +84,6 @@ export default function Footer() {
           <Lista></Lista>
         </CajaSeccion>
       </Columna>
-
-      <Columna>
-        <CajaSeccion>
-          <Titulo>Servicios</Titulo>
-          <Lista>
-            {servicios.map((ser, index) => {
-              return (
-                <Item className="noStyle" key={index}>
-                  {ser.nombre}
-                </Item>
-              );
-            })}
-          </Lista>
-        </CajaSeccion>
-      </Columna>
-
       <Columna className="sinBordes">
         <MapaGoogle
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.0523470595954!2d-68.4428370229441!3d18.66164681964713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf3718e1b49321%3A0x9a8dd17d487c617b!2sCASTECONH!5e0!3m2!1ses-419!2sdo!4v1739970822753!5m2!1ses-419!2sdo"
@@ -148,6 +146,7 @@ const Enlaces = styled(Link)`
     /* border: 1px solid red; */
     margin-bottom: 15px;
     width: 100%;
+    padding-top: 17px;
     &:hover {
       text-decoration: none;
     }
@@ -171,6 +170,7 @@ const Columna = styled.section`
 
   &.logo {
     background-color: ${Theme.primary.azulProfundo};
+    /* padding: 10px; */
   }
   @media screen and (max-width: 1050px) {
     width: 90%;

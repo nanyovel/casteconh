@@ -8,8 +8,8 @@ export default function PorqueElegirnos() {
       <Wrap>
         <i>
           <Texto>
-            &ldquo; Somos una empresa con una amplia trayectoria y experiencia
-            en construcción, ofrecemos soluciones integrales y personalizadas,
+            &ldquo;Somos una empresa con una amplia trayectoria y experiencia en
+            construcción, ofrecemos soluciones integrales y personalizadas,
             utilizando tecnología de vanguardia, manteniendo altos estándares de
             calidad y sostenibilidad. Nos destacamos porque brindamos una
             atención personalizada y respaldo postventa, garantizando un
@@ -41,4 +41,5 @@ const Texto = styled.div`
   color: ${Theme.neutral.neutral650};
   line-height: 2.5rem;
   font-style: italic;
+  text-align: justify;
 `;

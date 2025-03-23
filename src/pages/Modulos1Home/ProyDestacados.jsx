@@ -15,7 +15,7 @@ export default function ProyDestacados() {
           <Img src={ImgQuirofano1} />
         </CajaImg>
         <CajaTitulo>
-          <Titulo> Hard Rock Hotel y Casino Punta Cana</Titulo>
+          <Titulo> Hard Rock Hotel & Casino Punta Cana</Titulo>
         </CajaTitulo>
       </Card>
       <Card>
