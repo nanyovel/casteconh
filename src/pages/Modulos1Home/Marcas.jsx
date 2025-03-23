@@ -7,6 +7,7 @@ import ImgKeyRin from "./../../../public/img/marcas/keyresin-logo.png";
 import { BotonGeneral } from "../../components/ElementosGenerales";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router";
 
 export default function Marcas() {
   const [sliderMostrar, setSliderMostrar] = useState("");
@@ -65,8 +66,13 @@ export default function Marcas() {
           <Elementos>Economía: Inversión a bajo coste.</Elementos>
         </Lista>
         <CajaBtn>
-          <BtnSimple>Comprar</BtnSimple>
-          <BtnSimple>Mas info</BtnSimple>
+          <Enlace
+            to={
+              "https://api.whatsapp.com/send?phone=+18494877649&text=Hola,%20equipo%20Casteconh.%20Quisiera,%20por%20favor,%20ser%20asistido."
+            }
+          >
+            Mas info
+          </Enlace>
         </CajaBtn>
       </CajaGlasliner>
 
@@ -105,8 +111,13 @@ export default function Marcas() {
           <Elementos>Instalación rápida.</Elementos>
         </Lista>
         <CajaBtn>
-          <BtnSimple>Comprar</BtnSimple>
-          <BtnSimple>Mas info</BtnSimple>
+          <Enlace
+            to={
+              "https://api.whatsapp.com/send?phone=+18494877649&text=Hola,%20equipo%20Casteconh.%20Quisiera,%20por%20favor,%20ser%20asistido."
+            }
+          >
+            Mas info
+          </Enlace>
         </CajaBtn>
       </CajaPolysto>
     </Container>
@@ -249,3 +260,38 @@ const CajaBtn = styled.div`
   justify-content: end;
 `;
 const BtnSimple = styled(BotonGeneral)``;
+const Enlace = styled(Link)`
+  margin: 5px;
+  cursor: pointer;
+  text-align: center;
+
+  border-radius: 5px;
+  height: 35px;
+  cursor: pointer;
+
+  border-radius: 5px;
+  min-width: 100px;
+  padding: 5px;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 1rem;
+  background-color: ${Theme.complementary.terracotaSuave};
+  box-shadow: 3px 3px 3px -1px rgba(0, 0, 0, 0.43);
+  display: inline-block;
+  color: white;
+
+  &:hover {
+    color: ${Theme.complementary.terracotaSuave};
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: white;
+    background-color: #955124;
+  }
+  &:focus {
+    border: 1px solid ${Theme.secondary.azulBrillante};
+  }
+`;

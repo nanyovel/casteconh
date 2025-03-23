@@ -13,6 +13,7 @@ import BarraMensaje from "../components/BarraMensaje";
 import PorqueElegirnos from "./Modulos1Home/PorqueElegirnos";
 import ProyDestacados from "./Modulos1Home/ProyDestacados";
 import { useLocation } from "react-router";
+import OurClients from "./Modulos1Home/OurClients";
 
 export default function Home() {
   const porqueElegirnosRef = useRef(null);
@@ -89,12 +90,23 @@ export default function Home() {
           <WrapCuadro>
             <CuadroAzul />
           </WrapCuadro>
+          <TituloSeccion>Nuestros clientes</TituloSeccion>
+        </CajaTitulo>
+        <WrapModulo>
+          <OurClients />
+        </WrapModulo>
+      </Seccion>
+      {/* <Seccion className="noPadding">
+        <CajaTitulo className="padding">
+          <WrapCuadro>
+            <CuadroAzul />
+          </WrapCuadro>
           <TituloSeccion>¿Que dicen nuestros clientes?</TituloSeccion>
         </CajaTitulo>
         <WrapModulo>
           <Opiniones />
         </WrapModulo>
-      </Seccion>
+      </Seccion> */}
 
       <Seccion className="parallax">
         <WrapModulo className="parallax">
@@ -114,10 +126,7 @@ export default function Home() {
         </WrapModulo>
       </Seccion>
 
-      <BarraMensaje
-        texto="¡Construimos tus sueños!
-"
-      />
+      <BarraMensaje texto="¡Construimos tus sueños!" />
       <Footer />
     </Container>
   );
