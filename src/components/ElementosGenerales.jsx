@@ -44,7 +44,8 @@ export const InputGeneral = styled.input`
   border: 1px solid #000;
   outline: none;
   padding: 10px;
-  color: ${Theme.neutral.neutral650};
+  color: ${Theme.primary.azulProfundo};
+
   background-color: ${Theme.complementary.terracotaSuave};
   background-color: ${Theme.neutral.neutral200};
   &:focus {
@@ -66,5 +67,34 @@ export const TextAreaGeneral = styled.textarea`
 
   &:focus {
     /* border: 1px solid ${Theme.secondary.azulBrillante}; */
+  }
+`;
+export const MenuDesplegable = styled.select`
+  outline: none;
+  border: 1px solid transparent;
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+  /* margin-bottom: 1px; */
+  background-color: ${Theme.neutral.blancoHueso};
+  border: 1px solid ${Theme.neutral.neutral600};
+  border-radius: 4px;
+  color: ${Theme.primary.azulProfundo};
+
+  &:focus {
+  }
+
+  &.disabled {
+    color: black;
+  }
+`;
+export const Opciones = styled.option`
+  border: none;
+
+  &:focus {
+    border: 1px solid white;
+  }
+  &:disabled {
+    color: black;
   }
 `;

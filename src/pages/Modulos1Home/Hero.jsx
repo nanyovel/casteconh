@@ -72,7 +72,10 @@ export default function Hero() {
               alt={`Hero image ${index + 1}`}
               $isActive={index === activeIndex}
             />
-            <Frosting className={index === activeIndex ? claseColocar : ""}>
+            <Frosting
+              $isActive={index === activeIndex}
+              className={index === activeIndex ? claseColocar : ""}
+            >
               <CajaTexto $isActive={index === activeIndex}>
                 <WrapLogoNombre>
                   <Titulo1>{foto.titulo}</Titulo1>
@@ -132,8 +135,8 @@ const Frosting = styled.div`
   position: absolute;
   right: 50%;
   top: 25%;
-
   transition: all 1s ease;
+  visibility: ${(props) => (props.$isActive ? "" : "hidden")};
   &.colocar {
     opacity: 0.9;
     right: -50px;
@@ -153,6 +156,7 @@ const CajaTexto = styled.div`
   min-height: 100px;
   position: absolute;
   top: ${(props) => (props.$isActive ? "100px" : "0")};
+
   left: 20px;
   transition: all 1.5s ease;
   background-color: #000000b0;

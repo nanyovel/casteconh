@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Theme from "../config/Theme";
 import Header from "../components/Header";
@@ -6,20 +6,101 @@ import Footer from "../components/Footer";
 import TituloPage from "../components/TituloPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { BotonGeneral, InputGeneral } from "../components/ElementosGenerales";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { autenticar } from "../firebase/firebaseConfig";
+import { ModalLoading } from "../components/ModalLoading";
 
-export default function Login() {
-  const handleSubmit = () => {};
-  const handleInputs = () => {};
-  const [datos, setDatos] = useState({});
-  const [showPassword, setShowPassword] = useState(false);
-  const [mensajeAlerta, setMensajeAlerta] = useState("");
-  const [hasAlerta, setHasAlerta] = useState(false);
+export default function Login({ userMaster }) {
+  const navigate = useNavigate();
+
   const [isLoading, setIsLoading] = useState(false);
+  const auth = getAuth();
+  auth.languageCode = "es";
+  const [autenticado, setAunteticado] = useState(false);
+  const [datosParseados, setDatosParseados] = useState(false);
+  const [dispatchAlerta, setDispatchAlerta] = useState(false);
+  const [mensajeAlerta, setMensajeAlerta] = useState("");
+  const [tipoAlerta, setTipoAlerta] = useState("");
+
+  useEffect(() => {
+    let continuarAqui = true;
+    setAunteticado(true);
+    if (auth.currentUser?.emailVerified == true) {
+      continuarAqui = false;
+      navigate("/");
+    } else if (auth.currentUser?.emailVerified == false) {
+      continuarAqui = false;
+      navigate("/");
+    }
+    if (continuarAqui) {
+      setDatosParseados(true);
+    }
+  }, [auth.currentUser, navigate]);
+
+  const initialDatos = {
+    correo: "",
+    password: "",
+  };
+  const [datos, setDatos] = useState({
+    ...initialDatos,
+  });
+
+  const handleInputs = (e) => {
+    const { name, value } = e.target;
+    setDatos({
+      ...datos,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Si existe algun campo vacio
+    let correoParsed = datos.correo.replace(" ", "");
+    if (correoParsed == "" || datos.password == "") {
+      setMensajeAlerta("Llena todos los campos.");
+      setTipoAlerta("error");
+      setDispatchAlerta(true);
+      return;
+    }
+    setIsLoading(true);
+    try {
+      await signInWithEmailAndPassword(
+        autenticar,
+        correoParsed,
+        datos.password
+      );
+      navigate("/");
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      switch (error.code) {
+        case "auth/invalid-credential":
+          setMensajeAlerta("Datos incorrectos.");
+          setTipoAlerta("error");
+          setDispatchAlerta(true);
+          break;
+        case "auth/invalid-email":
+          setMensajeAlerta("Email no existe.");
+          setTipoAlerta("error");
+          setDispatchAlerta(true);
+          break;
+        default:
+          setMensajeAlerta("Error con la base de datos");
+          setTipoAlerta("error");
+          setDispatchAlerta(true);
+          break;
+      }
+      setIsLoading(false);
+    }
+  };
+  const [showPassword, setShowPassword] = useState(false);
+  const [hasAlerta, setHasAlerta] = useState(false);
   return (
     <>
-      <Header />
+      <Header userMaster={userMaster} />
 
       <CajaContenido>
         <TituloPage titulo="Inicio de sesion" />
@@ -60,7 +141,7 @@ export default function Login() {
             )}
 
             <CajaInput className="btn">
-              <BtnSimple type="submit" onClick={() => handleSubmit()}>
+              <BtnSimple type="submit" onClick={(e) => handleSubmit(e)}>
                 Iniciar sesion
               </BtnSimple>
             </CajaInput>

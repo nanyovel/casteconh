@@ -1,0 +1,37 @@
+import styled from "styled-components";
+
+export const CSSLoader = () => {
+  return <Spinner className="loader"></Spinner>;
+};
+
+const Spinner = styled.span`
+  &.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #0000;
+    border-right-color: #ffa50097;
+    position: relative;
+    animation: l24 1s infinite linear;
+  }
+  &.loader::after,
+  &.loader::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: inherit;
+    animation: inherit;
+    animation-duration: 2s;
+  }
+
+  .loader:after {
+    animation-duration: 4s;
+  }
+
+  @keyframes l24 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+`;

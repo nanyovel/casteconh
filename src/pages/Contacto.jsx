@@ -6,10 +6,10 @@ import Footer from "../components/Footer";
 import FormContact from "../components/FormContact";
 import TituloPage from "../components/TituloPage";
 
-export default function Contacto() {
+export default function Contacto({ userMaster }) {
   return (
     <>
-      <Header />
+      <Header userMaster={userMaster} />
       <Container>
         <TituloPage titulo={"Contacto"} />
 

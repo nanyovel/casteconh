@@ -7,10 +7,10 @@ import ImgParallax from "./../../public/img/receid.jpg";
 import ImgParallax2 from "./../../public/img/receid2.jpg";
 import TituloPage from "../components/TituloPage";
 
-export default function Nosotros() {
+export default function Nosotros({ userMaster }) {
   return (
     <>
-      <Header />
+      <Header userMaster={userMaster} />
       <Container>
         <TituloPage titulo={"Sobre nosotros"} />
 

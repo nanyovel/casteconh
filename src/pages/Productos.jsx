@@ -6,12 +6,12 @@ import Footer from "../components/Footer";
 import TituloPage from "../components/TituloPage";
 import { Products } from "../lib/Products";
 
-export default function Productos() {
+export default function Productos({ userMaster }) {
   const mitad1 = Products.filter((prod, index) => index < Products.length / 2);
   const mitad2 = Products.filter((prod, index) => index >= Products.length / 2);
   return (
     <>
-      <Header />
+      <Header userMaster={userMaster} />
       <Container>
         <TituloPage titulo={"Productos"} />
         <Contenido>

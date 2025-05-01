@@ -1,3 +1,5 @@
+import ImgMale from "./../../public/img/avatar example/nino.png";
+
 const Theme = {
   primary: {
     mostazaDorado: "#D5A241",
@@ -18,6 +20,14 @@ const Theme = {
     turquezaOscuro: "#007F7A",
     verdeOliva: "#6B732F",
     rozadoFlat: "#F88FA4",
+    narajanBrillante: "#F78C6B",
+    success: "#28a745",
+    warning: "#ffc107",
+    warningClear: "#fcd40a",
+    warningAmarillo: "#ebff3b",
+    edicionYellow: "#b9a603",
+    danger: "#dc3545",
+    info: "#178192",
   },
   neutral: {
     blacoCalido: "#F1FAEE",
@@ -34,6 +44,7 @@ const Theme = {
     paddingLateral: "150px",
     sombra: "3px 7px 11px 0px rgba(0, 0, 0, 0.75)",
     sombraAzul1: "3px 7px 11px 0px rgb(168, 218, 220)",
+    userMale: ImgMale,
   },
 };
 

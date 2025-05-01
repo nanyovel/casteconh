@@ -6,10 +6,10 @@ import TituloPage from "../components/TituloPage";
 import Theme from "../config/Theme";
 import { servicios } from "../lib/Servicios";
 
-export default function Service() {
+export default function Service({ userMaster }) {
   return (
     <>
-      <Header />
+      <Header userMaster={userMaster} />
       <Container>
         <TituloPage titulo={"Servicios"} />
         <SubContainer>

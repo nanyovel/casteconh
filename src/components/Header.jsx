@@ -5,8 +5,11 @@ import ImgLogo from "./../../public/img/logo.png";
 import { Link, NavLink } from "react-router";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getAuth } from "firebase/auth";
 
-export default function Header({ absolute }) {
+export default function Header({ absolute, userMaster }) {
+  const auth = getAuth();
+  const usuario = auth.currentUser;
   return (
     <Container className={absolute ? "absolute" : ""}>
       <CajaInterna className="izq">
@@ -37,15 +40,44 @@ export default function Header({ absolute }) {
             <Elementos>
               <Enlaces to={"/contacto"}>Contacto</Enlaces>
             </Elementos>
-            {/* <Elementos>
-              <Enlaces to={"/login"}>Iniciar Sesion</Enlaces>
-            </Elementos> */}
+
+            {!usuario && (
+              <Elementos>
+                <Enlaces to={"/login"}>Iniciar Sesion</Enlaces>
+              </Elementos>
+            )}
             {/* <Elementos className="registrarse">
               <Enlaces to={"/registro"} className="registrarse">
                 Registrarse
               </Enlaces>
             </Elementos> */}
+            {userMaster?.permisos.includes("accessDashboard") && (
+              <Elementos>
+                <Enlaces to={"/dashboard"}>Dashboard</Enlaces>
+              </Elementos>
+            )}
           </Lista>
+          {userMaster && (
+            <Enlaces className={"perfil"} to={"/perfil"}>
+              <CajaPerfil>
+                {/* {userMaster.urlFotoPerfil ? ( */}
+                {userMaster ? (
+                  <CajaAvatar>
+                    <ImgAvatar src={userMaster.urlFotoPerfil} />
+                    {/* <ImgAvatar src={'https://firebasestorage.googleapis.com/v0/b/caelossoficial.appspot.com/o/avatars%2FfotoPerfiljperez?alt=media&token=92293807-c372-490d-a633-9a14d7f38dcf'} /> */}
+                  </CajaAvatar>
+                ) : (
+                  <CajaAvatar>
+                    <ImgAvatar className="icon" src={Theme.config.userMale} />
+                  </CajaAvatar>
+                )}
+
+                <CajaNombrePerfil>
+                  <NombrePerfil>{userMaster.nombre}</NombrePerfil>
+                </CajaNombrePerfil>
+              </CajaPerfil>
+            </Enlaces>
+          )}
         </NavList>
       </CajaInterna>
     </Container>
@@ -58,7 +90,7 @@ const Container = styled.div`
   width: 100%;
   height: 80px;
   background-color: ${Theme.primary.azulProfundo};
-  padding: 0 200px;
+  padding: 0 100px;
   display: flex;
   opacity: 0.9;
   z-index: 100;
@@ -168,4 +200,51 @@ const Enlaces = styled(Link)`
   @media screen and (max-width: 340px) {
     font-size: 14px;
   }
+`;
+
+//
+const CajaPerfil = styled.div`
+  min-width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: ease 0.2s all;
+
+  @media screen and (max-width: 620px) {
+    display: flex;
+    /* flex-direction: row; */
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 4px;
+    padding: 3px;
+  }
+
+  &:hover {
+    border-radius: 4px;
+    box-shadow: ${Theme.config.sombra};
+  }
+`;
+
+const CajaAvatar = styled.div`
+  width: 40px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+`;
+const ImgAvatar = styled.img`
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  image-rendering: auto;
+
+  border-radius: 50%;
+`;
+const CajaNombrePerfil = styled.div``;
+const NombrePerfil = styled.h3`
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
 `;

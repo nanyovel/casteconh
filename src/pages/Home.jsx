@@ -15,7 +15,7 @@ import ProyDestacados from "./Modulos1Home/ProyDestacados";
 import { useLocation } from "react-router";
 import OurClients from "./Modulos1Home/OurClients";
 
-export default function Home() {
+export default function Home({ userMaster }) {
   const porqueElegirnosRef = useRef(null);
 
   const scrollToContacto = () => {
@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <Container>
-      <Header absolute={true} />
+      <Header absolute={true} userMaster={userMaster} />
       <Hero />
       <br />
       <Seccion className="bgBlue">

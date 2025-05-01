@@ -63,19 +63,29 @@ export default function Footer() {
           <Titulo>Enlaces de interes</Titulo>
           <Lista>
             <Item>
-              <Enlaces to={"/nosotros"}>¿Quiénes somos?</Enlaces>
+              <Enlaces className="centro" to={"/nosotros"}>
+                ¿Quiénes somos?
+              </Enlaces>
             </Item>
             <Item>
-              <Enlaces to={"/#porqueElefi"}>¿Por qué elegirnos?</Enlaces>
+              <Enlaces className="centro" to={"/#porqueElefi"}>
+                ¿Por qué elegirnos?
+              </Enlaces>
             </Item>
             <Item>
-              <Enlaces to={"/nosotros"}>Historia de nuestra empresa</Enlaces>
+              <Enlaces className="centro" to={"/nosotros"}>
+                Historia de nuestra empresa
+              </Enlaces>
             </Item>
             <Item>
-              <Enlaces to={"/productos"}>Productos</Enlaces>
+              <Enlaces className="centro" to={"/productos"}>
+                Productos
+              </Enlaces>
             </Item>
             <Item>
-              <Enlaces to={"/servicios"}>Servicios</Enlaces>
+              <Enlaces className="centro" to={"/servicios"}>
+                Servicios
+              </Enlaces>
             </Item>
           </Lista>
         </CajaSeccion>
@@ -98,7 +108,6 @@ export default function Footer() {
     </Container>
   );
 }
-console.log(window.screen.width);
 const Container = styled.footer`
   width: 100%;
   height: 500px;
@@ -150,6 +159,10 @@ const Enlaces = styled(Link)`
     &:hover {
       text-decoration: none;
     }
+  }
+
+  &.centro {
+    color: ${Theme.primary.mostazaDorado};
   }
 `;
 
@@ -214,7 +227,8 @@ const Img = styled.img`
 `;
 const Lista = styled.ul`
   color: ${Theme.neutral.neutral600};
-  color: white;
+  color: ${Theme.primary.azulProfundo};
+  /* color: white; */
   /* border: 1px solid white; */
   width: 100%;
   padding-left: 30px;
